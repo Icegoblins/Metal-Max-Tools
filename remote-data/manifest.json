@@ -11114,6 +11114,10 @@
 			"sha256": "b6c61f647c541327183c38ad2be7a3c1377640f2aa44c75c3804f11895aa0495",
 			"size": 1069
 		},
+		"img/怪物数据/入侵者克星.png": {
+			"sha256": "c1f489b488f7f5a504a88a31e1b1f3ae49eec79919b1d65301c5466abf026744",
+			"size": 1274
+		},
 		"img/怪物数据/公路枪手.png": {
 			"sha256": "3e3b10a627dd3849ac26fcec18d585345cf5c2582898fabfc6649118d9458c86",
 			"size": 4503
@@ -11202,6 +11206,10 @@
 			"sha256": "7288bfbd205163514f6b37d4b2aeb8d374838f3d1137105c38a8fa9200b5a3aa",
 			"size": 6567
 		},
+		"img/怪物数据/监视器.png": {
+			"sha256": "c7774a5618929bc9a219aacc6e7bc91ad5eb218eef0efb7b544d87198afbc837",
+			"size": 1159
+		},
 		"img/怪物数据/空油桶.png": {
 			"sha256": "c97e73c3fa588c052c21e7ee7a0f6be736135508c9eb50be02e799b0e702cdee",
 			"size": 2133
@@ -11233,6 +11241,10 @@
 		"img/怪物数据/蛙人.png": {
 			"sha256": "9154094fc68d1cfab4ed8aca8c533d313de002cb2b17c9cf0c6f3d188f0de54f",
 			"size": 5125
+		},
+		"img/怪物数据/蝙蝠系统.png": {
+			"sha256": "f3e3699c4a1bada2278f89865d075ea5a9e8c46aeca02359e017b65f22c7ddba",
+			"size": 1432
 		},
 		"img/怪物数据/行商杀手.png": {
 			"sha256": "df76a703539479f1cf71ea12d5fef641eb35f9fc0a8ee2de6a5269f73afb8e88",
