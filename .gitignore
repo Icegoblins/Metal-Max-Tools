@@ -1,26 +1,26 @@
-# Python
+# 仅 remote-data/ 与 .github/workflows/ 会提交到 GitHub（见 同步远程数据仓.py）
+/*
+
+!.gitignore
+!remote-data/
+!remote-data/**
+!.github/
+!.github/**
+
+# 本地开发（即使目录被意外取消忽略也不提交）
 .venv/
 __pycache__/
 *.pyc
-
-# Node / Tauri 构建
 mm2r-toolbox/node_modules/
 mm2r-toolbox/src-tauri/target/
-
-# 打包产物
 dist-shell/
 release-assets/
-
-# IDE
 .idea/
 .vscode/
-
-# 系统
 Thumbs.db
 .DS_Store
-
-# 密钥（切勿提交）
 .env
 .env.*
 *.pem
 data-key.txt
+~$*

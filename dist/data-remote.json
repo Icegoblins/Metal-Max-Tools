@@ -1,8 +1,0 @@
-{
-	"enabled": false,
-	"pagesBase": "https://YOUR_USER.github.io/YOUR_REPO/",
-	"githubRepo": "YOUR_USER/YOUR_REPO",
-	"release": {
-		"tag": "data-2026.09.08"
-	}
-}

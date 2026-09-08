@@ -1,16 +1,11 @@
-# 将 dist/ 中的游戏数据（非 UI 页面）部署到 GitHub Pages，供桌面端拉取更新。
+# 将 remote-data/ 部署到 GitHub Pages，供桌面端拉取热更新数据。
 name: Deploy data to Pages
 
 on:
   push:
     branches: [main, master]
     paths:
-      - "dist/data/**"
-      - "dist/img/**"
-      - "dist/config.json"
-      - "dist/manifest.json"
-      - "dist/audio/**"
-      - "dist/fonts/**"
+      - "remote-data/**"
       - ".github/workflows/deploy-data.yml"
   workflow_dispatch:
 
@@ -32,27 +27,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Assemble Pages site (data only)
+      - name: Verify Pages payload
         run: |
           set -e
-          SITE=pages-site
-          rm -rf "$SITE"
-          mkdir -p "$SITE"
-          cp dist/manifest.json "$SITE/" 2>/dev/null || echo '{"version":"0","pagesBase":"/","files":{}}' > "$SITE/manifest.json"
-          cp dist/config.json "$SITE/" 2>/dev/null || true
-          cp -r dist/data "$SITE/" 2>/dev/null || true
-          cp -r dist/img "$SITE/" 2>/dev/null || true
-          cp -r dist/audio "$SITE/" 2>/dev/null || true
-          cp -r dist/fonts "$SITE/" 2>/dev/null || true
-          echo "Pages site files:"
-          find "$SITE" -type f | head -50
-          echo "Total files: $(find "$SITE" -type f | wc -l)"
+          test -f remote-data/manifest.json || (echo "缺少 remote-data/manifest.json" && exit 1)
+          echo "Files:"
+          find remote-data -type f | head -30
+          echo "Total: $(find remote-data -type f | wc -l)"
 
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: pages-site
+          path: remote-data
 
       - id: deployment
         uses: actions/deploy-pages@v4
