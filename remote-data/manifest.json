@@ -1,6 +1,6 @@
 {
 	"version": "2026.09.09",
-	"pagesBase": "https://YOUR_USER.github.io/YOUR_REPO/",
+	"pagesBase": "https://Icegoblins.github.io/Metal-Max-Tools/",
 	"files": {
 		"config.json": {
 			"sha256": "1394d52999a06db9fdb26b77b61b87c010e832e515492b1faa6ad01f220cd992",
@@ -11086,6 +11086,10 @@
 			"sha256": "166114a710de5d4de728954796a3bf7d7072c25d2e434bc9045e72f80c4b7cbb",
 			"size": 4184
 		},
+		"img/怪物数据/85mm自行炮.png": {
+			"sha256": "88a8fbbd7bf76e829f8a21a879a553e143b7bb61cd7b4e846dd6815f996b20d9",
+			"size": 949
+		},
 		"img/怪物数据/Dr.大王花.png": {
 			"sha256": "83a0a543eaf8f8b6ddb4fa11bc9b509dfe3bd8ba541fd8ae0b058cc8739461a1",
 			"size": 17721
@@ -11094,21 +11098,41 @@
 			"sha256": "f5c94d60bee030e396f528445c1607ecfedf9157845a44586e1117c632aaf0f1",
 			"size": 5417
 		},
+		"img/怪物数据/仿生波奇.png": {
+			"sha256": "157c77266e8dd7893beb27607d011a51043c93082740296f6436d04beccf6f41",
+			"size": 1995
+		},
 		"img/怪物数据/仿生蜗牛.png": {
 			"sha256": "8370e59ee7a72c9631a70a5d0ea96208efb6f787bdb522d4da72e28189c01b7d",
 			"size": 1606
+		},
+		"img/怪物数据/光束蜂鸟.png": {
+			"sha256": "b6c61f647c541327183c38ad2be7a3c1377640f2aa44c75c3804f11895aa0495",
+			"size": 1069
 		},
 		"img/怪物数据/公路枪手.png": {
 			"sha256": "3e3b10a627dd3849ac26fcec18d585345cf5c2582898fabfc6649118d9458c86",
 			"size": 4503
 		},
+		"img/怪物数据/地狱基多拉.png": {
+			"sha256": "9ce8e6c63ab7cb84d6355feb84557784d8ca352a95bb78a4aa18a3dacd8f6063",
+			"size": 6395
+		},
 		"img/怪物数据/夜叉蟹.png": {
 			"sha256": "397d4b155bdc464b1e1ab2cc9a08a18ca83b4e0745933f194359c6e27f7a3666",
 			"size": 5264
 		},
+		"img/怪物数据/巡逻蜂.png": {
+			"sha256": "cdcd124100a012d04b6a142c8bfdc95d45b7282424b72f4a8f584dc330515a8a",
+			"size": 1808
+		},
 		"img/怪物数据/巨蚁.png": {
 			"sha256": "f72b31aa6a1ee610e340376fe45edc09dd01b8cc6d97cd0a8496751992d84273",
 			"size": 2404
+		},
+		"img/怪物数据/影像蝙蝠.png": {
+			"sha256": "f6f6874c32814671b94daa23aa7c9ec3aaae7f3c2f033c2f76c9c6eeeb90181a",
+			"size": 2666
 		},
 		"img/怪物数据/徘徊油桶.png": {
 			"sha256": "3fabfb64ada76d4c799ce2dbf0745babde19555bbfe08064fafa9c6d4090b1f8",
@@ -11121,6 +11145,10 @@
 		"img/怪物数据/杀人阿米巴.png": {
 			"sha256": "55173dbdf41dd59bc397296ef96fb2b7c446bcb693a22e7344e1be268c365df3",
 			"size": 3336
+		},
+		"img/怪物数据/杀手洛龙.png": {
+			"sha256": "b238be176cac0fca3fa579d94c16397090a089fd82b51caccc6823f9fb513d95",
+			"size": 7695
 		},
 		"img/怪物数据/毒虫加农炮.png": {
 			"sha256": "4830d1fad8771a4f27da8116795c52d35e92ac91f456d2c4a24f12ad2d015680",
@@ -11142,6 +11170,10 @@
 			"sha256": "453a83a6db041448f25eacd2d19554d9de30bd7b039772b47f41bbaf36f2f82d",
 			"size": 2084
 		},
+		"img/怪物数据/炸弹龟.png": {
+			"sha256": "4613eefe600c4245fc9b396a132fed3404a1a3270b8f88cd711d5cc388122ebd",
+			"size": 853
+		},
 		"img/怪物数据/烟雾花.png": {
 			"sha256": "4da47243fac1915fed1a4a6d8849281904c9770ef0e352481f5564f22e50ed5a",
 			"size": 3962
@@ -11150,9 +11182,17 @@
 			"sha256": "9e04414e89f509dc2ce53b0432b41e2dd0e0a216ea606bdad8e7fb325b4d0f88",
 			"size": 5734
 		},
+		"img/怪物数据/爆破龟.png": {
+			"sha256": "ab8a26611732bf6b7454df81f26c3f10bbc7a4d6dd28694bd8fd8a4916589cdb",
+			"size": 901
+		},
 		"img/怪物数据/狼蛛火神炮.png": {
 			"sha256": "b8f2fe4cc6ebca771c0253f98d44a03ee799c47da7b1d8d31b503041de1abbc5",
 			"size": 1610
+		},
+		"img/怪物数据/玩火猿猴.png": {
+			"sha256": "643c8d94d716c860eb63fc7b7976759bba5a774a79664ae4df7f66027c90556d",
+			"size": 2164
 		},
 		"img/怪物数据/电磁海月.png": {
 			"sha256": "7288bfbd205163514f6b37d4b2aeb8d374838f3d1137105c38a8fa9200b5a3aa",
@@ -11165,6 +11205,10 @@
 		"img/怪物数据/章鱼坦克.png": {
 			"sha256": "4f20cf6a22a92f0e2516c3332002f67574ac7423cf2e0637eed7d70c5042dbae",
 			"size": 25153
+		},
+		"img/怪物数据/红蝎枪.png": {
+			"sha256": "2e12c7daaa5ee9aa6ab1e6899fe7c742ed131a8adebd6ab1c7b5ccb6c3e8f39f",
+			"size": 7074
 		},
 		"img/怪物数据/聚焦鼠.png": {
 			"sha256": "f9c9088f9c9e296ceeb379cf6ad4d360157ecade340e89471f34d78eab98a965",
@@ -11190,9 +11234,17 @@
 			"sha256": "df76a703539479f1cf71ea12d5fef641eb35f9fc0a8ee2de6a5269f73afb8e88",
 			"size": 19824
 		},
+		"img/怪物数据/超合金战警.png": {
+			"sha256": "b14649bfe8bda4d437fdc42e0e56df0200421445a07a670a5298c4c68a98c7be",
+			"size": 4266
+		},
 		"img/怪物数据/软体加农炮.png": {
 			"sha256": "53b1a585e7819418df7d4f6184e795038c25a815ac43b8275955013b7ab59080",
 			"size": 3241
+		},
+		"img/怪物数据/金蚁.png": {
+			"sha256": "3bb4de91d9502767ef6961150a5b9a5a462d1c74542fa4dc0b2343bf611df686",
+			"size": 365
 		},
 		"img/怪物数据/钻头蚯蚓.png": {
 			"sha256": "ccc9d5d5469ddff3cabb1aea1a196a2030545f611a2fdf9aeae27a64eac00beb",
@@ -11218,17 +11270,31 @@
 			"sha256": "83a0a543eaf8f8b6ddb4fa11bc9b509dfe3bd8ba541fd8ae0b058cc8739461a1",
 			"size": 17721
 		},
+		"img/赏金首/地狱基多拉.png": {
+			"sha256": "9ce8e6c63ab7cb84d6355feb84557784d8ca352a95bb78a4aa18a3dacd8f6063",
+			"size": 6395
+		},
+		"img/赏金首/杀手洛龙.png": {
+			"sha256": "b238be176cac0fca3fa579d94c16397090a089fd82b51caccc6823f9fb513d95",
+			"size": 7695
+		},
 		"img/赏金首/电磁海月.png": {
 			"sha256": "7288bfbd205163514f6b37d4b2aeb8d374838f3d1137105c38a8fa9200b5a3aa",
 			"size": 6567
+		},
+		"img/赏金首/超合金战警.png": {
+			"sha256": "b14649bfe8bda4d437fdc42e0e56df0200421445a07a670a5298c4c68a98c7be",
+			"size": 4266
 		}
 	},
 	"release": {
-		"tag": "data-2026.09.08",
+		"tag": "data-2026.09.09",
 		"assets": {
 			"music.zip": {
-				"url": "https://github.com/YOUR_USER/YOUR_REPO/releases/download/data-2026.09.08/music.zip",
-				"encrypted": false
+				"url": "https://github.com/Icegoblins/Metal-Max-Tools/releases/download/data-2026.09.09/music.zip",
+				"encrypted": false,
+				"sha256": "fd5b0c8d210c862b6f75e897eb0c2923baef2e60e8650422d8e1bbbe94e988eb",
+				"size": 274166319
 			}
 		}
 	}
