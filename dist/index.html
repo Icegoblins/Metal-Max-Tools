@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>METAL MAX Database - WasteLand v2.2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/desktop-guard.js"></script>
+    <script src="js/data-sync.js"></script>
+</head>
+<body>
+
+<style>
+.titlebar { display:none; height:34px; align-items:center; justify-content:space-between;
+    background:#020602; border-bottom:1px solid #2a7a45; flex-shrink:0; z-index:300;
+    margin: -15px -15px 12px; }
+.tb-drag { flex:1; height:100%; display:flex; align-items:center; gap:10px; padding:0 12px; user-select:none; }
+.tb-app { font-size:12px; letter-spacing:2px; color:#50ff7d; }
+.tb-sub { font-size:10px; color:#2a7a45; letter-spacing:1px; }
+.tb-btns { display:flex; height:100%; }
+.tb-btn { width:44px; height:100%; display:flex; align-items:center; justify-content:center; color:#9fdfaf; font-size:13px; cursor:pointer; }
+.tb-btn:hover { background:rgba(80,255,125,0.15); color:#fff; }
+.tb-close:hover { background:#c42b1c; color:#fff; }
+</style>
+
+<div class="titlebar" id="titlebar">
+    <div class="tb-drag" data-tauri-drag-region>
+        <span class="tb-app">METAL MAX 工具箱</span>
+        <span class="tb-sub">METAL MAX WASTELAND SYSTEM</span>
+    </div>
+    <div class="tb-btns">
+        <div class="tb-btn" id="tb-min">─</div>
+        <div class="tb-btn" id="tb-max">□</div>
+        <div class="tb-btn tb-close" id="tb-close">✕</div>
+    </div>
+</div>
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+    if (typeof window.__TAURI__ === "undefined" || !window.__TAURI__.core || !window.__TAURI__.window) return;
+    const tb = document.getElementById("titlebar");
+    if (tb) tb.style.display = "flex";
+    const win = window.__TAURI__.window.getCurrentWindow();
+    const on = (id, fn) => { const el = document.getElementById(id); if (el) el.onclick = fn; };
+    on("tb-min", () => win.minimize());
+    on("tb-max", () => win.toggleMaximize());
+    on("tb-close", () => win.close());
+});
+</script>
+
+<div class="top-bar">
+    <div class="brand-zone"><img src="LOGO.png" alt="MM LOGO" class="mm-logo"></div>
+    <div class="status-bridge">
+        <div class="status-text"><span>DECODING: ACTIVE</span><span>SIGNAL: MAX [||||||]</span><span>LOC: 35.68, 139.69</span></div>
+        <div class="bridge-line"></div>
+    </div>
+    <div class="nav-zone" style="display:flex; align-items:center; gap:10px; min-width:0;"><a class="tab-btn" href="map.html" style="text-decoration:none; display:inline-block; flex-shrink:0;">BS控制器</a><div class="tabs" id="tab-bar" style="flex:1; min-width:0;"></div></div>
+</div>
+
+<div class="container">
+    <div class="list-panel" id="item-list"></div>
+    <div class="detail-panel" id="detail-scroller">
+        <div class="top-section">
+            <div class="visual-box" id="pic-area">
+                <div class="scanning-line"></div>
+                <div class="poster-layer">
+                    <div class="poster-name" id="post-name">NAME</div>
+                    <div class="poster-money" id="post-money">000,000G</div>
+                </div>
+                <div id="img-container" style="width: 100%; display:flex; justify-content:center; align-items:center;">
+                    <span>ANALYZING...</span>
+                </div>
+            </div>
+            <div class="info-content">
+                <div class="info-header">
+                    <div class="item-title-box"><h1 class="item-name" id="det-name">HUNTER DATABASE</h1></div>
+                    <div class="system-status">DECODING: ACTIVE<br>SIGNAL: STRONG [||||||  ]<br>REF: METAL MAX-DB-V2.2</div>
+                </div>
+                <div class="stats-grid" id="stats-grid"></div>
+            </div>
+        </div>
+        <div class="desc-area" id="desc-text"></div>
+    </div>
+</div>
+
+
+<div id="custom-modal" class="mm-modal-overlay">
+    <div class="mm-modal-box" id="modal-box">
+        <div class="mm-modal-header">
+            <span id="modal-title">SYSTEM MESSAGE</span>
+            <span style="opacity: 0.5;">CODE: 404-NOT-FOUND</span>
+        </div>
+        <div class="mm-modal-content" id="modal-message">
+            </div>
+        <input type="text" id="modal-input" style="display:none;" onkeydown="if(event.key==='Enter')modalConfirm()" oninput="document.getElementById('modal-input-hint').style.opacity='0'">
+        <div id="modal-input-hint" style="display:none; font-size:11px; opacity:0.5; margin-top:4px; letter-spacing:1px;">&gt; 输入名称后按 确认 或回车</div>
+        <div class="mm-modal-footer">
+            <button class="mm-btn" id="modal-cancel" style="display:none;" onclick="closeModal()">取消</button>
+            <button class="mm-btn" onclick="modalConfirm()">确认</button>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener("pointerdown", e => {
+        const el = e.target.closest("button, a, .tb-btn, .tab");
+        if (!el) return;
+        if (e.target.closest("input, textarea, select")) return;
+        e.preventDefault();
+    }, true);
+    // 全局渲染器字典
+    // 必须最先定义，否则后面的脚本找不到这个字典
+    window.PageRenderers = {};
+    window.registerPageRenderer = function(name, config) {
+        window.PageRenderers[name] = config;
+        console.log(`Renderer Registered: ${name}`); // 调试用
+    };
+    // 各分类专属背景图：把图片放到 img/ 下同名文件即生效，删除文件即回落终端风格
+    window.CAT_BG_MAP = {
+        '怪物数据': 'img/guaiwushuju_bg.png',
+        '战车装备': 'img/zhanchezhuangbei_bg.png',
+        '战车道具': 'img/zhanchedaoju_bg.png',
+        '特殊炮弹': 'img/teshupaodan_bg.png',
+        '人类武器': 'img/renleiwuqi_bg.png',
+        '人类防具': 'img/renleifangju_bg.png',
+        '人类道具': 'img/renleidaoju_bg.png',
+        '称号': 'img/chenghao_bg.png'
+    };
+</script>
+<audio id="global-audio-engine"></audio>
+<script src="js/map-bridge.js"></script>
+<script src="js/pages/shangjinshou.js"></script>
+<script src="js/pages/guaishu.js"></script>
+<script src="js/pages/utils.js"></script>
+<script src="js/pages/renleiwuqi.js"></script>
+<script src="js/pages/renleifangju.js"></script>
+<script src="js/pages/lianzhuang.js"></script>
+<script src="js/pages/renleidaoju.js"></script>
+<script src="js/pages/zhanche_zhuangbei.js"></script>
+<script src="js/pages/teshupaodan.js"></script>
+<script src="js/pages/zhanchedaoju.js"></script>
+<script src="js/pages/chenghao.js"></script>
+<script src="js/pages/dianchangji.js"></script>
+
+<script>
+    // --- 全局状态 ---
+    let currentRawData = [];    // 存储当前分类的原始数据（用于过滤）
+    let typewriterTimer = null; // 打字机计时器
+    window.currentStarIdx = 0;  // 当前星级：0-通常, 1-1星, 2-2星, 3-3星
+    window.lastSelectedItem = null; // 最后选中的物品对象
+    window.currentGroupItems = [];  // 当前选中的进化支系/分组内的所有物品
+
+    // --- 初始化 ---
+    window.onload = async () => {
+        try {
+            const res = await fetch('config.json');
+            const categories = await res.json();
+            renderTabs(categories);
+
+            // 增加一个小延时，确保外部引入的 dianchangji.js 已经完成了 window.registerPageRenderer
+            setTimeout(() => {
+                if(categories.length > 0) {
+                    loadCategory(categories[0]);
+                }
+            }, 50);
+        } catch (e) {
+            document.body.innerHTML = "<h1 style='padding:50px; color:red;'>CRITICAL ERROR: DATABASE OFFLINE</h1>";
+        }
+    };
+
+    function renderTabs(cats) {
+    document.getElementById('tab-bar').innerHTML = cats.map(c =>
+        // 确保点击顶栏 Tab 时不保留搜索内容
+        `<div class="tab-btn" data-cat="${c}" id="t-${c}" onclick="loadCategory('${c}', false)">${c}</div>`
+    ).join('');
+    refitTabs();
+}
+
+    // 窗口放不下时，把右侧放不下的页签折叠进 [More] 菜单
+    function refitTabs() {
+    const bar = document.getElementById('tab-bar');
+    if (!bar) return;
+    const btns = Array.from(bar.querySelectorAll('.tab-btn:not(.tab-more)'));
+
+    // [More] 按钮（只创建一次）
+    let more = bar.querySelector('.tab-more');
+    if (!more) {
+        more = document.createElement('div');
+        more.className = 'tab-btn tab-more';
+        more.innerText = '[More]';
+        bar.appendChild(more);
+    }
+    // 折叠下拉面板挂在 body 上，避免被页签区的 overflow 裁切
+    let dd = document.getElementById('tab-dropdown');
+    if (!dd) {
+        dd = document.createElement('div');
+        dd.id = 'tab-dropdown';
+        dd.className = 'tab-dropdown';
+        document.body.appendChild(dd);
+    }
+
+    // 先全部展开拿到每個页签的自然宽度（只测一次，作为缓存）
+    btns.forEach(b => b.classList.remove('folded'));
+    more.style.display = 'none';
+    const gap = 8;
+    const moreW = 70; // [More] 预留宽度
+    const widths = btns.map(b => b.offsetWidth);
+
+    // 迭代到收敛：页签区可用宽度会随折叠状态变化（flex 布局反馈），
+    // 因此每次按当前布局算出折叠数并应用后，再用新布局重算，直到稳定
+    let prevKeep = -1;
+    let keep = btns.length;
+    for (let iter = 0; iter < 12; iter++) {
+        const full = bar.clientWidth;
+
+        // 第一遍：不放 [······] 能否全部放下
+        let acc = 0;
+        keep = 0;
+        for (let i = 0; i < btns.length; i++) {
+            const w = widths[i] + (i > 0 ? gap : 0);
+            if (acc + w <= full) { acc += w; keep = i + 1; }
+            else break;
+        }
+        if (keep === btns.length) {
+            btns.forEach(b => b.classList.remove('folded'));
+            more.style.display = 'none';
+            // 实测校验：全部展开状态下的布局才可信，放不下就继续走折叠流程
+            if (bar.scrollWidth <= bar.clientWidth + 1) {
+                dd.classList.remove('open');
+                return;
+            }
+        }
+
+        // 第二遍：预留 [······] 的宽度再算
+        acc = 0;
+        keep = 0;
+        for (let i = 0; i < btns.length; i++) {
+            const w = widths[i] + (i > 0 ? gap : 0);
+            if (acc + w <= full - moreW) { acc += w; keep = i + 1; }
+            else break;
+        }
+        keep = Math.max(keep, 1); // 至少保留第一个页签
+
+        // 应用折叠
+        more.style.display = '';
+        btns.forEach((b, i) => b.classList.toggle('folded', i >= keep));
+        // 实测校正：[More] 仍被挤出可视区就继续折叠（至少保留 1 个页签）
+        let guard = 0;
+        while (keep > 1 && bar.scrollWidth > bar.clientWidth + 1 && guard < 12) {
+            keep--;
+            btns.forEach((b, i) => b.classList.toggle('folded', i >= keep));
+            guard++;
+        }
+
+        if (keep === prevKeep) break; // 已收敛
+        prevKeep = keep;
+    }
+
+    const folded = btns.slice(keep);
+    if (folded.length === 0) {
+        dd.classList.remove('open');
+        return;
+    }
+
+    // 下拉菜单内容
+    dd.innerHTML = folded.map(b =>
+        `<div class="dd-item${b.classList.contains('active') ? ' active' : ''}" data-cat="${b.dataset.cat}">${b.dataset.cat}</div>`
+    ).join('');
+    dd.querySelectorAll('.dd-item').forEach(el => {
+        el.onclick = (e) => {
+            e.stopPropagation();
+            dd.classList.remove('open');
+            loadCategory(el.dataset.cat, false);
+        };
+    });
+    // 当前激活页签被折叠时，[More] 按钮高亮提示
+    more.classList.toggle('active', folded.some(b => b.classList.contains('active')));
+
+    // 点击 [More] 展开/收起（在按钮下方定位，避免被裁切）
+    more.onclick = (e) => {
+        e.stopPropagation();
+        if (!dd.classList.contains('open')) {
+            const r = more.getBoundingClientRect();
+            dd.style.top = (r.bottom + 6) + 'px';
+            dd.style.right = Math.max(0, window.innerWidth - r.right) + 'px';
+        }
+        dd.classList.toggle('open');
+    };
+}
+    window.addEventListener('resize', () => {
+        refitTabs();
+        // 布局稳定后再复算一次，防止 resize 瞬间测量偏差导致误判
+        clearTimeout(window.__refitTimer);
+        window.__refitTimer = setTimeout(refitTabs, 200);
+    });
+    document.addEventListener('click', () => {
+        const dd = document.getElementById('tab-dropdown');
+        if (dd) dd.classList.remove('open');
+        const gdd = document.getElementById('group-dd-list');
+        if (gdd) gdd.style.display = 'none';
+    });
+
+    async function loadCategory(name, isJump = false) {
+    if (!isJump) window.pendingTargetName = null;
+
+    // 1. Tab 高亮切换
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    const btn = document.getElementById(`t-${name}`);
+    if (btn) btn.classList.add('active');
+    refitTabs(); // 刷新折叠菜单的激活标记
+
+    const listPanel = document.getElementById('item-list');
+
+    try {
+        // 2. 【核心修复】无论是否为点唱机，都先渲染基础 UI 框架 (包含 list-content)
+        // 这样 renderList 就永远不会报错找不到 innerHTML
+        const searchVal = isJump ? "" : (document.getElementById('db-search')?.value || "");
+        renderDefaultUI(listPanel, searchVal);
+
+        const res = await fetch(`data/${encodeURIComponent(name)}.json?t=${Date.now()}`);
+        const json = await res.json();
+        const data = Array.isArray(json) ? json : (json.data || []);
+        currentRawData = data;
+        window.currentRawData = data;
+
+        if (name === "点唱机") {
+            // --- 点唱机专项布局 ---
+            const visualBox = document.getElementById('pic-area');
+            if(visualBox) visualBox.style.display = 'none';
+            const detailScroller = document.getElementById('detail-scroller');
+            if(detailScroller) detailScroller.style.paddingTop = '';
+
+            // 渲染列表（收藏歌曲置顶分组）
+            renderMusicData(data);
+
+            // 绑定播放器逻辑
+            window.bindJukeboxList();
+
+        } else {
+            // --- 普通分类布局复原 ---
+            const visualBox = document.getElementById('pic-area');
+            if(visualBox) visualBox.style.display = 'flex';
+            const detailScroller = document.getElementById('detail-scroller');
+            if(detailScroller) detailScroller.style.paddingTop = '';
+
+            execFilter();
+        }
+    } catch (e) {
+        console.error("加载失败:", e);
+    }
+}
+
+// 提取 UI 渲染为独立函数，保持代码整洁
+function renderDefaultUI(container, val) {
+    container.innerHTML = `
+        <div class="search-bar">
+            <input type="search" id="db-search" value="${val}" placeholder="名称/属性/特性..."
+                   autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+                   oninput="execFilter()">
+            <button type="button" class="search-action-btn" onclick="handleManualGlobalSearch()">全局</button>
+            <button type="button" class="search-action-btn" onclick="resetSearch()">重置</button>
+        </div>
+        <div id="list-content"></div>`;
+    if (window.mmDisableInputAutofill) window.mmDisableInputAutofill(document.getElementById("db-search"));
+}
+
+    // 核心过滤逻辑 - 升级版：支持多维度检索与全局联想
+    function execFilter() {
+        const query = document.getElementById('db-search').value.toLowerCase().trim();
+        const activeTab = document.querySelector('.tab-btn.active').innerText;
+
+        // 1. 如果搜索框为空，渲染当前分类全部数据
+        if (!query) {
+            renderGroupedData(currentRawData, activeTab);
+            return;
+        }
+
+        // 2. 多维度模糊匹配逻辑
+        const filtered = currentRawData.filter(it => {
+            return (it.名称 && it.名称.toLowerCase().includes(query)) ||
+                   (it.改造支系 && it.改造支系.toLowerCase().includes(query)) ||
+                   (it.属性 && it.属性.toLowerCase().includes(query)) ||
+                   (it.特性 && it.特性.toLowerCase().includes(query)) ||
+                   (it.类型 && it.类型.toLowerCase().includes(query));
+        });
+
+        // 3. 自动联动：如果当前分类搜不到，且字数 > 1，控制台静默提示或准备全局搜索
+        if (filtered.length === 0 && query.length > 1) {
+            console.log(`>> 当前分类 [${activeTab}] 无结果，建议点击右侧 [全局检索]`);
+        }
+        if (filtered.length === 0 && query.length >= 2) {}
+        renderGroupedData(filtered, activeTab);
+
+    }
+
+    // 提取渲染逻辑
+    function renderGroupedData(data, activeTab) {
+        if (activeTab === "链装") {
+            // 链装：列表只显示通常版本，星级版本在详情页用星级选择器切换
+            const groupsMap = {};
+            data.forEach(item => {
+                const star = String(item.星级 ?? "-");
+                if (star === "-" || star === "0" || star === "通常") {
+                    const g = item.部位 || "其他";
+                    if (!groupsMap[g]) groupsMap[g] = [];
+                    groupsMap[g].push(item);
+                }
+            });
+            const groupedData = Object.keys(groupsMap).map(k => ({ groupTitle: k, items: groupsMap[k] }));
+            renderList(groupedData, true);
+        } else if (activeTab === "战车装备") {
+            const groupsMap = {};
+            data.forEach(item => {
+                if (item.星级 === 0 || !item.星级) {
+                    let gName = item.分类 || "其他";
+                    if (item.部位 && item.部位.includes("固定")) {
+                        gName = item.部位 || "固定";
+                    } else if (gName === "引擎" && item.改造支系 && item.改造支系 !== "-") {
+                        gName = `引擎 - ${item.改造支系}`;
+                    }
+                    if (!groupsMap[gName]) groupsMap[gName] = [];
+                    groupsMap[gName].push(item);
+                }
+            });
+            const groupedData = Object.keys(groupsMap).map(k => ({ groupTitle: k, items: groupsMap[k] }));
+            renderList(groupedData, true);
+        } else {
+            const groupKeyMap = { "人类防具": "部位", "人类道具": "类型", "人类武器": "类型", "赏金首": "级别" };
+            renderList(data, false, groupKeyMap[activeTab] || "类型");
+        }
+    }
+
+    // 点唱机分组逻辑
+    function renderMusicData(data) {
+    // 分组优先级：用户端覆盖（下拉框所选）→ 数据“分组”字段（扫描歌曲.py 划分）
+    // 结构：♥ 我的收藏（置顶）→ 各分组（按首次出现顺序）→ 未分组歌曲
+    const favs = (window.jukeboxMgr && window.jukeboxMgr.getFavs) ? window.jukeboxMgr.getFavs() : new Set();
+    const overrides = (window.jukeboxMgr && window.jukeboxMgr.getGroups) ? window.jukeboxMgr.getGroups() : {};
+    const effGroup = (it) => overrides[it.文件名] || (it.分组 || '');
+
+    const favItems = data.filter(it => favs.has(it.文件名));
+
+    // 分组名按歌曲首次出现的顺序排列
+    const order = [];
+    data.forEach(it => {
+        const g = effGroup(it);
+        if (g && !order.includes(g)) order.push(g);
+    });
+
+    const groupedData = [];
+    if (favItems.length > 0) groupedData.push({ groupTitle: "♥ 我的收藏", items: favItems });
+    order.forEach(g => {
+        groupedData.push({ groupTitle: g, items: data.filter(it => effGroup(it) === g) });
+    });
+    const rest = data.filter(it => !effGroup(it));
+    if (order.length > 0 && rest.length > 0) groupedData.push({ groupTitle: "未分组", items: rest });
+    if (order.length === 0) groupedData.push({ groupTitle: "全部歌曲", items: data });
+
+    renderList(groupedData, true);
+}
+
+    // 点唱机列表项点击绑定（收藏切换导致列表重绘后也需要重新挂载）
+    // 注意：分组置顶打乱了显示顺序，因此一律按数据对象定位，禁止使用位置索引
+    window.bindJukeboxList = function() {
+        const items = document.querySelectorAll('#item-list .nav-item');
+        if (items.length === 0) return;
+        items.forEach((li) => {
+            li.onclick = (e) => {
+                e.stopPropagation();
+                // 批量分组模式：点列表只勾选，不播放
+                if (window.jukeboxMgr && window.jukeboxMgr.batchMode) {
+                    window.jukeboxMgr.toggleBatchItem(li.__item);
+                    return;
+                }
+                document.querySelectorAll('#item-list .nav-item').forEach(el => el.classList.remove('active'));
+                li.classList.add('active');
+                if (window.jukeboxMgr && li.__item) window.jukeboxMgr.selectByItem(li.__item);
+            };
+            // 重绘后恢复批量勾选状态
+            if (window.jukeboxMgr && window.jukeboxMgr.batchMode && li.__item) {
+                li.classList.toggle('batch-sel', window.jukeboxMgr.batchSel.has(li.__item.文件名));
+            }
+        });
+        // 高亮正在播放的曲目（按文件名匹配，与显示顺序无关）
+        if (window.jukeboxMgr && window.jukeboxMgr.currentIndex !== -1) {
+            const playing = window.jukeboxMgr.playlist[window.jukeboxMgr.currentIndex];
+            const playingKey = playing && playing.文件名;
+            let matched = false;
+            items.forEach(li => {
+                const hit = playingKey && li.__item && li.__item.文件名 === playingKey;
+                li.classList.toggle('active', hit);
+                if (hit) matched = true;
+            });
+            if (!matched) items.forEach(el => el.classList.remove('active'));
+        }
+        // 初始化右侧界面
+        showDetail({ 名称: "音乐点唱机", 类别: "点唱机" });
+        // 如果有曲目正在后台播放，恢复它的标题/日志显示
+        if (window.jukeboxMgr && window.jukeboxMgr.refreshJukeboxUI) window.jukeboxMgr.refreshJukeboxUI();
+    };
+
+
+/**
+ * 提取出来的统一渲染逻辑，方便 execFilter 调用
+ */
+function renderGroupedList(data, activeTab) {
+    if (activeTab === "链装") {
+        // 链装：列表只显示通常版本，星级版本在详情页用星级选择器切换
+        const groupsMap = {};
+        data.forEach(item => {
+            const star = String(item.星级 ?? "-");
+            if (star === "-" || star === "0" || star === "通常") {
+                const g = item.部位 || "其他";
+                if (!groupsMap[g]) groupsMap[g] = [];
+                groupsMap[g].push(item);
+            }
+        });
+        const groupedData = Object.keys(groupsMap).map(k => ({ groupTitle: k, items: groupsMap[k] }));
+        renderList(groupedData, true);
+    } else if (activeTab === "战车装备") {
+        const groupsMap = {};
+        data.forEach(item => {
+            // 只在列表中显示 0 星基础物品，防止星级条目刷屏
+            if (item.星级 === 0 || !item.星级) {
+                let gName = item.分类 || "其他";
+                if (item.部位 && item.部位.includes("固定")) {
+                    gName = "[ 固定装备 ]";
+                } else if (gName === "引擎" && item.改造支系 && item.改造支系 !== "-") {
+                    gName = `引擎 - ${item.改造支系}`;
+                }
+                if (!groupsMap[gName]) groupsMap[gName] = [];
+                groupsMap[gName].push(item);
+            }
+        });
+        const groupedData = Object.keys(groupsMap).map(k => ({ groupTitle: k, items: groupsMap[k] }));
+        renderList(groupedData, true);
+    } else {
+        const groupKeyMap = { "人类防具": "部位", "人类道具": "类型", "人类武器": "类型", "赏金首": "级别" };
+        renderList(data, false, groupKeyMap[activeTab] || "类型");
+    }
+}
+
+    // --- 统一列表渲染 ---
+    function renderList(data, isPreGrouped, groupKey = "") {
+    const container = document.getElementById('list-content');
+    container.innerHTML = '';
+
+    let groups = {};
+    if (isPreGrouped) {
+        data.forEach(g => { groups[g.groupTitle] = g.items; });
+    } else {
+        data.forEach(item => {
+            const key = item[groupKey] || "其他";
+            if (!groups[key]) groups[key] = [];
+            groups[key].push(item);
+        });
+    }
+
+    // 全局计数器
+    let globalIndex = 1;
+
+    for (const [groupName, items] of Object.entries(groups)) {
+        const groupDiv = document.createElement('div');
+        groupDiv.className = 'list-group-wrapper';
+        groupDiv.innerHTML = `
+            <div class="sticky-group-header" onclick="this.parentElement.classList.toggle('is-folded')">
+                <span class="fold-icon">▼</span>
+                <span class="title-text">${groupName}</span>
+                <span class="count-tag">${items.length}</span>
+            </div>
+            <ul class="group-item-list"></ul>
+        `;
+
+        const ul = groupDiv.querySelector('ul');
+        items.forEach((item) => {
+            const li = document.createElement('li');
+            li.className = 'nav-item';
+            // 挂数据对象：分组打乱显示顺序后，点击/收藏仍按数据本身定位而非位置
+            li.__item = item;
+
+            // --- 计算星级后缀 ---
+            const starStr = (item.星级 && item.星级 > 0) ? " " + "★".repeat(item.星级) : "";
+            const starHtml = starStr ? `<span style="color: #4a6b4e; margin-left: 5px;">${starStr}</span>` : "";
+            // 使用 innerHTML 替换 innerText 以支持颜色标签
+            li.innerHTML = `[${globalIndex.toString().padStart(3, '0')}] ${item.名称}${starHtml}`;
+
+            // --- 关键点：使用全局计数器，并在每次生成后自增 ---
+            li.innerText = `[${globalIndex.toString().padStart(3, '0')}] ${item.名称}`;
+            globalIndex++;
+
+            li.onclick = (e) => {
+                e.stopPropagation();
+                document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+                li.classList.add('active');
+
+                window.allData = currentRawData;
+
+                // 关键点：进化轴需要展示的是该支系的所有 0 星阶段，以便跳转
+                // 我们直接把当前这个小分组（例如“引擎 - 龙卷”）的所有 0 星项传过去
+                window.currentGroupItems = items;
+
+                showDetail(item);
+            };
+            ul.appendChild(li);
+        });
+        container.appendChild(groupDiv);
+    }
+
+    if (!window.pendingTargetName) {
+        const firstLi = container.querySelector('.nav-item');
+        if (firstLi) firstLi.click();
+    }
+}
+
+    function highlightAndScrollTo(name) {
+    // 1. 清除所有列表项的旧高亮
+    document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+
+    // 2. 寻找目标并高亮
+    const listItems = document.querySelectorAll('.nav-item');
+    for (let li of listItems) {
+        // 这里的匹配逻辑要精准，防止“越野车”匹配到“越野车导弹”
+        // 假设 innerText 格式是 [001] 名称
+        const displayName = li.innerText.replace(/^\[\d+\]\s*/, '');
+        if (displayName === name) {
+            li.classList.add('active');
+            // 滚动到中心位置
+            li.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            break;
+        }
+    }
+}
+    // --- 详情渲染 ---
+    async function showDetail(item) {
+    if (!item) return;
+
+    // --- 新增：无论接下来是否有打字机内容，先触发一次清屏/擦除 ---
+    if (window.startTypewriter) {
+        // 如果你不传入参数，或者传入空字符串，它会执行擦除逻辑
+        startTypewriter("");
+    }
+
+    window.lastSelectedItem = item;
+
+    // 1. 动态获取当前活动的 Tab 和 渲染器
+    const activeTab = document.querySelector('.tab-btn.active').innerText;
+    const renderer = window.PageRenderers[activeTab];
+
+    // 2. 【核心修复】重置所有可能被污染的 UI 状态
+    const statsGrid = document.getElementById('stats-grid');
+    const picArea = document.getElementById('pic-area');
+    const moneyTag = document.getElementById('post-money');
+    const imgContainer = document.getElementById('img-container');
+
+    statsGrid.innerHTML = ""; // 强制清空旧渲染器的 HTML
+    picArea.className = 'visual-box'; // 移除旧的皮肤类（如 skin-jukebox）
+    if (moneyTag) moneyTag.style.display = 'block'; // 强制恢复价格显示
+
+    // 3. 基础信息渲染
+    const starStr = (item.星级 && item.星级 > 0) ? " " + "★".repeat(item.星级) : "";
+
+    if (activeTab === "点唱机") {
+        document.getElementById('det-name').innerHTML = "音乐点唱机";
+        document.getElementById('post-name').innerText = "JUKEBOX";
+        if (moneyTag) moneyTag.style.display = 'none'; // 仅点唱机隐藏价格
+    } else {
+        document.getElementById('det-name').innerHTML = `${item.名称}<span style="font-size: 32px; color: #fff; text-shadow: 0 0 12px var(--mm-green); margin: 0;">${starStr}</span>`;
+        document.getElementById('post-name').innerText = item.名称 + starStr;
+        if (moneyTag) {
+            const price = item.价格;
+            moneyTag.innerText = (price === 0 || !price) ? "非卖品" : (price.toLocaleString() + " G");
+        }
+        // 称号没有价格概念，隐藏海报金额位
+        if (activeTab === "称号" && moneyTag) moneyTag.style.display = 'none';
+    }
+
+    // 4. 执行渲染器插件
+    if (renderer) {
+        if (renderer.skin) picArea.classList.add(renderer.skin);
+        statsGrid.innerHTML = renderer.renderStats(item);
+        if (renderer.onUpdateVisual) renderer.onUpdateVisual(item);
+    }
+    // 每个分类都挂独立皮肤类，便于 CSS 按分类配置背景图（无图则落终端风格）
+    picArea.classList.add('skin-' + activeTab);
+
+    // 背景图探测：底图真实存在时注入背景并隐藏虚线边框，否则显式置空。
+    // 探测带时间戳绕过 HTTP 缓存，保证增删图片后普通刷新立即生效
+    picArea.dataset.bgKey = activeTab;
+    picArea.classList.remove('bg-loaded');
+    picArea.style.setProperty('--cat-bg', 'none');
+    const bgPath = window.CAT_BG_MAP[activeTab];
+    if (bgPath) {
+        const probe = new Image();
+        probe.onload = () => {
+            if (picArea.dataset.bgKey !== activeTab) return;
+            picArea.style.setProperty('--cat-bg', `url("${bgPath}?t=${Date.now()}")`);
+            picArea.classList.add('bg-loaded');
+        };
+        probe.onerror = () => {
+            if (picArea.dataset.bgKey !== activeTab) return;
+            picArea.style.setProperty('--cat-bg', 'none');
+            picArea.classList.remove('bg-loaded');
+        };
+        probe.src = `${bgPath}?t=${Date.now()}`;
+    }
+
+    // 5. 处理图片加载或点唱机占位图
+    if (activeTab === "点唱机") {
+        imgContainer.innerHTML = '<div class="disc-vinyl-placeholder"></div>';
+    } else {
+        handleImageLoad(item, activeTab);
+    }
+}
+
+        // 打字机接口
+        window.triggerGlobalTypewriter = function(text) {
+            if (typeof startTypewriter === "function") {
+                // 执行你页面上统一的打字机动画
+                startTypewriter(text || ">> SYSTEM: NO DATA LOG.");
+            } else {
+                const logElem = document.getElementById('typewriter-text');
+                if (logElem) logElem.innerText = ">> " + text;
+            }
+        }
+
+
+    // --- 辅助功能 ---
+
+    // 全局星级切换（由 zhanche_zhuangbei.js 里的按钮点击）
+    window.switchVehicleStar = function(idx) {
+        window.currentStarIdx = idx;
+        const activeTab = document.querySelector('.tab-btn.active').innerText;
+        const renderer = PageRenderers[activeTab];
+        if (window.lastSelectedItem && renderer) {
+            // 局部刷新属性网格，不重写整个详情页
+            document.getElementById('stats-grid').innerHTML = renderer.renderStats(window.lastSelectedItem);
+        }
+    };
+
+    function startTypewriter(text) {
+    const elem = document.getElementById('desc-text');
+    if (!elem) return;
+
+    // 重置日志区自己的滚动条（不再滚动外层详情面板，避免顶走上方信息）
+    elem.scrollTop = 0;
+
+    // 清除之前的计时器
+    if (window.typewriterTimer) clearInterval(window.typewriterTimer);
+
+    let currentText = elem.innerText;
+
+    // --- 步骤 1: 快速擦除 (退格效果) ---
+    if (currentText.length > 0) {
+        elem.classList.add('erasing');
+        window.typewriterTimer = setInterval(() => {
+            if (currentText.length > 0) {
+                // 每次删除 3 个字符，加快速度
+                currentText = currentText.slice(0, -3);
+                elem.innerText = currentText;
+            } else {
+                clearInterval(window.typewriterTimer);
+                elem.classList.remove('erasing');
+                // 如果 text 为空，到这里就结束了，实现了“彻底消字”
+                if (text) beginTyping(text);
+            }
+        }, 10); // 极速退格
+    } else {
+        beginTyping(text);
+    }
+
+    // --- 步骤 2: 正式打字逻辑 ---
+    function beginTyping(newText) {
+        let i = 0;
+        elem.innerText = "";
+        window.typewriterTimer = setInterval(() => {
+            if (i < newText.length) {
+                elem.innerText += newText.charAt(i++);
+                // 自动跟随滚动：只在日志区内部滚动，上方布局不受影响
+                if (elem.scrollHeight > elem.clientHeight) {
+                    elem.scrollTop = elem.scrollHeight;
+                }
+            } else {
+                clearInterval(window.typewriterTimer);
+            }
+        }, 15); // 打字速度
+    }
+}
+
+    // 统一图片加载逻辑
+    function handleImageLoad(item, activeTab) {
+        const imgContainer = document.getElementById('img-container');
+        const itemName = item.名称;
+        const formats = ['png', 'jpg', 'webp'];
+        const tryLoad = (fIdx) => {
+            if (fIdx >= formats.length) {
+                imgContainer.innerHTML = '<span style="color:#333;">NO_SIGNAL</span>';
+                return;
+            }
+            const testPath = `img/${activeTab}/${itemName}.${formats[fIdx]}`;
+            const img = new Image();
+            img.onload = () => imgContainer.innerHTML = `<img src="${testPath}" style="max-width:90%; max-height:90%; object-fit:contain;">`;
+            img.onerror = () => tryLoad(fIdx + 1);
+            img.src = testPath;
+        };
+        tryLoad(0);
+    }
+
+
+    // 添加这个函数作为按钮的直接入口
+    window.handleManualGlobalSearch = async function() {
+    const query = document.getElementById('db-search').value.trim().toLowerCase();
+    if (!query) return mmAlert("请输入关键词", "warning");
+
+    const tabs = Array.from(document.querySelectorAll('.tab-btn')).map(btn => btn.innerText);
+    let allMatchedResults = [];
+
+
+
+    for (const cat of tabs) {
+        try {
+            const res = await fetch(`data/${encodeURIComponent(cat)}.json?t=${Date.now()}`);
+            const raw = await res.json();
+            const data = Array.isArray(raw) ? raw : (raw.data || []);
+
+            // 拍平数据（处理战车装备的分组结构）
+            let flatData = [];
+            if (cat === "战车装备" && data.length > 0 && data[0].items) {
+                data.forEach(g => { flatData = flatData.concat(g.items); });
+            } else {
+                flatData = data;
+            }
+
+            // 执行多维度筛选
+            const matches = flatData.filter(it =>
+                (it.名称 && it.名称.toLowerCase().includes(query)) ||
+                (it.属性 && it.属性.toLowerCase().includes(query)) ||
+                (it.特性 && it.特性.toLowerCase().includes(query)) ||
+                (it.改造支系 && it.改造支系.toLowerCase().includes(query))
+            ).map(it => ({ ...it, originCat: cat })); // 标记来源，方便点击跳转
+
+            allMatchedResults = allMatchedResults.concat(matches);
+        } catch (e) { console.warn(e); }
+    }
+
+    if (allMatchedResults.length === 0) {
+        mmAlert(`全库未发现匹配项: [${query}]`, 'warning');
+        execFilter(); // 回复原状
+        return;
+    }
+
+    // 渲染搜索结果列表
+    renderSearchResultsList(allMatchedResults, query);
+};
+
+    window.resetSearch = function() {
+    // 1. 获取搜索框并清空
+    const searchInput = document.getElementById('db-search');
+    if (searchInput) searchInput.value = "";
+
+    // 2. 获取当前正在查看的 Tab 名称
+    const activeTab = document.querySelector('.tab-btn.active')?.innerText;
+
+    if (activeTab) {
+        // 3. 重新调用加载分类，isJump 设为 false 以确保恢复默认首项显示
+        loadCategory(activeTab, false);
+    }
+};
+
+function renderSearchResultsList(results, query) {
+    const container = document.getElementById('list-content');
+
+    container.innerHTML = '';
+
+
+    // 按来源分类进行展示
+    const groups = {};
+    results.forEach(it => {
+        if (!groups[it.originCat]) groups[it.originCat] = [];
+        groups[it.originCat].push(it);
+    });
+
+    for (const [catName, items] of Object.entries(groups)) {
+        const groupDiv = document.createElement('div');
+        groupDiv.className = 'list-group-wrapper';
+        groupDiv.innerHTML = `
+            <div class="sticky-group-header">
+                <span class="title-text" style="color:#ffae00;">[ ${catName} ]</span>
+            </div>
+            <ul class="group-item-list"></ul>`;
+
+        const ul = groupDiv.querySelector('ul');
+        items.forEach(item => {
+            const li = document.createElement('li');
+            li.className = 'nav-item search-result-item';
+
+            // 全局搜索结果物品星级渲染
+            const starStr = (item.星级 && item.星级 > 0) ? " " + "★".repeat(item.星级) : "";
+            const starHtml = starStr ? `<span style="color: #4a6b4e; margin-left: 5px;">${starStr}</span>` : "";
+            li.innerHTML = `${item.名称}${starHtml}`;
+            li.onclick = async (e) => {
+                e.stopPropagation();
+                document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
+                li.classList.add('active');
+
+                // 视觉切换 Tab
+                const targetTab = document.getElementById(`t-${item.originCat}`);
+                if (targetTab) {
+                    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                    targetTab.classList.add('active');
+                }
+
+                // 核心：直接渲染详情，不重新加载分类列表
+                showDetail(item, item.originCat);
+            };
+            ul.appendChild(li);
+        });
+        container.appendChild(groupDiv);
+    }
+}
+
+    // --- 全局状态逻辑修复 ---
+    window.pendingTargetName = null; // 用于存储跨分类跳转的目标名称
+
+    /**
+     * 全局跨分类搜索并跳转
+     * @param {string} targetName 目标物品或底盘的名称
+     */
+    window.globalSearchAndJump = async function(targetName) {
+    if (!targetName) return;
+    const query = targetName.toLowerCase().trim();
+    const tabs = Array.from(document.querySelectorAll('.tab-btn')).map(btn => btn.innerText);
+
+    // 记录状态，防止 renderList 自动点击第一项
+    window.pendingTargetName = targetName;
+
+    for (const cat of tabs) {
+        try {
+            const res = await fetch(`data/${encodeURIComponent(cat)}.json?t=${Date.now()}`);
+            if (!res.ok) continue;
+            const raw = await res.json();
+            const data = Array.isArray(raw) ? raw : (raw.data || []);
+
+            let targetItem = null;
+
+            // 精确搜索
+            const findInList = (list) => list.find(it =>
+                it.名称 === targetName || (it.名称 && it.名称.toLowerCase() === query)
+            );
+            // 模糊搜索
+            const fuzzyInList = (list) => list.find(it =>
+                it.名称 && it.名称.toLowerCase().includes(query)
+            );
+
+            // 1. 尝试在当前分类查找（优先精准，后模糊）
+            if (cat === "战车装备" && data.length > 0 && data[0].items) {
+                // 处理分组格式的战车数据
+                for (const group of data) {
+                    targetItem = findInList(group.items) || fuzzyInList(group.items);
+                    if (targetItem) break;
+                }
+            } else {
+                // 处理平铺格式的数据
+                targetItem = findInList(data) || fuzzyInList(data);
+            }
+
+            if (targetItem) {
+                // 跳转时 isJump 设为 true，清空搜索框以显示完整列表
+                await loadCategory(cat, true);
+
+                showDetail(targetItem);
+
+                setTimeout(() => {
+                    highlightAndScrollTo(targetItem.名称);
+                    window.pendingTargetName = null; // 定位结束，清除状态
+                }, 300);
+                return;
+            }
+        } catch (e) { console.warn(e); }
+    }
+
+    // --- 兜底：按名称找不到物品时，尝试匹配分组名（如掉落物填的“头部链装备”）---
+    // 命中则跳到对应分类，展开并高亮该分组
+    for (const cat of tabs) {
+        try {
+            const res = await fetch(`data/${encodeURIComponent(cat)}.json?t=${Date.now()}`);
+            if (!res.ok) continue;
+            const raw = await res.json();
+            const data = Array.isArray(raw) ? raw : (raw.data || []);
+
+            const groupKeyMap = { "链装": "部位", "人类防具": "部位", "人类武器": "类型", "人类道具": "类型", "赏金首": "级别" };
+            const gKey = groupKeyMap[cat];
+            if (!gKey || !data.some(it => it[gKey] === targetName)) continue;
+
+            window.pendingTargetName = targetName;
+            await loadCategory(cat, true);
+
+            setTimeout(() => {
+                const headers = document.querySelectorAll('.sticky-group-header .title-text');
+                for (const h of headers) {
+                    if (h.innerText.trim() === targetName) {
+                        const wrapper = h.closest('.list-group-wrapper');
+                        wrapper.classList.remove('is-folded');
+                        wrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        // 分组头短暂高亮提示
+                        wrapper.style.outline = '1px solid #ffd700';
+                        wrapper.style.transition = 'outline-color 1.5s';
+                        setTimeout(() => { wrapper.style.outline = '1px solid transparent'; }, 100);
+                        setTimeout(() => { wrapper.style.outline = ''; }, 2000);
+                        // 自动选中该分组第一件，让右侧详情同步切换
+                        const firstItem = wrapper.querySelector('.nav-item');
+                        if (firstItem) firstItem.click();
+                        break;
+                    }
+                }
+                window.pendingTargetName = null;
+            }, 300);
+            return;
+        } catch (e) { console.warn(e); }
+    }
+
+    window.pendingTargetName = null;
+
+    try {
+        const mk = await searchMapPresetMarker(targetName);
+        if (mk && window.MapBridge) {
+            MapBridge.jumpToMarker(mk.mapId, mk.item.名称, mk.kind);
+            return;
+        }
+    } catch (e) { console.warn(e); }
+
+    mmAlert(`数据库未发现包含 [${targetName}] 的条目`, 'warning');
+};
+
+    /**
+     * 辅助函数：系统弹窗 (保持不变)
+     */
+    function mmAlert(message, type = 'info') {
+        const modal = document.getElementById('custom-modal');
+        const box = document.getElementById('modal-box');
+        const msgArea = document.getElementById('modal-message');
+        const titleArea = document.getElementById('modal-title');
+        const input = document.getElementById('modal-input');
+        const hint = document.getElementById('modal-input-hint');
+
+        if (!modal || !box) return;
+
+        msgArea.innerText = message;
+        titleArea.innerText = type === 'warning' ? 'SYSTEM WARNING' : 'SYSTEM MESSAGE';
+        // 普通提示不带输入框和取消键
+        if (input) input.style.display = 'none';
+        if (hint) hint.style.display = 'none';
+        const cancelBtn = document.getElementById('modal-cancel');
+        if (cancelBtn) cancelBtn.style.display = 'none';
+        mmPromptCallback = null;
+
+        if (type === 'warning') {
+            box.classList.add('warning');
+        } else {
+            box.classList.remove('warning');
+        }
+
+        modal.style.display = 'flex';
+    }
+
+    // 带输入框的系统弹窗（新建分组等命名场景），替代系统 prompt
+    let mmPromptCallback = null;
+    window.mmPrompt = function(message, defaultValue, onOk) {
+        const modal = document.getElementById('custom-modal');
+        const box = document.getElementById('modal-box');
+        const msgArea = document.getElementById('modal-message');
+        const input = document.getElementById('modal-input');
+        const hint = document.getElementById('modal-input-hint');
+        if (!modal || !input) {
+            // 找不到自定义弹窗时兜底用系统 prompt
+            const v = prompt(message, defaultValue || '');
+            if (v && onOk) onOk(v);
+            return;
+        }
+        mmPromptCallback = onOk || null;
+        msgArea.innerText = message;
+        input.style.display = 'block';
+        input.value = defaultValue || '';
+        if (hint) hint.style.display = 'block';
+        const cancelBtn = document.getElementById('modal-cancel');
+        if (cancelBtn) cancelBtn.style.display = 'inline-block';
+        box.classList.remove('warning');
+        modal.style.display = 'flex';
+        setTimeout(() => { input.focus(); }, 60);
+    };
+
+    // 确认框：带取消键的询问弹窗（无输入框），如批量归组前的确认
+    window.mmConfirm = function(message, onOk) {
+        const modal = document.getElementById('custom-modal');
+        const box = document.getElementById('modal-box');
+        const msgArea = document.getElementById('modal-message');
+        const input = document.getElementById('modal-input');
+        const hint = document.getElementById('modal-input-hint');
+        const cancelBtn = document.getElementById('modal-cancel');
+        if (!modal) {
+            if (onOk && confirm(message)) onOk();
+            return;
+        }
+        mmPromptCallback = onOk || null;
+        msgArea.innerText = message;
+        if (input) input.style.display = 'none';
+        if (hint) hint.style.display = 'none';
+        if (cancelBtn) cancelBtn.style.display = 'inline-block';
+        box.classList.remove('warning');
+        modal.style.display = 'flex';
+    };
+
+    // 弹窗“确认”按钮：带输入框时把输入值交给回调
+    window.modalConfirm = function() {
+        const input = document.getElementById('modal-input');
+        const cb = mmPromptCallback;
+        mmPromptCallback = null;
+        const modal = document.getElementById('custom-modal');
+        if (modal) modal.style.display = 'none';
+        if (!cb) return;
+        // 带输入框的命名弹窗：把输入值交给回调；确认框（无输入框）：直接执行
+        if (input && input.style.display !== 'none') {
+            const v = input.value.trim();
+            if (v) cb(v);
+        } else {
+            cb();
+        }
+    };
+
+    function closeModal() {
+        const modal = document.getElementById('custom-modal');
+        if (modal) modal.style.display = 'none';
+        mmPromptCallback = null;
+    }
+
+    function modalVisible() {
+        const modal = document.getElementById('custom-modal');
+        return modal && modal.style.display === 'flex';
+    }
+
+    document.addEventListener('keydown', e => {
+        if (!modalVisible()) return;
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            modalConfirm();
+        } else if (e.key === 'Escape') {
+            e.preventDefault();
+            closeModal();
+        }
+    });
+
+
+</script>
+
+</body>
+</html>

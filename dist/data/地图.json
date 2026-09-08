@@ -1,0 +1,46 @@
+[
+	{
+		"id": "world",
+		"名称": "世界地图",
+		"宽": 24640,
+		"高": 20544,
+		"图块": "img/地图/tilesets/world.png",
+		"图块数据": "data/地图图块/world.bin",
+		"图块预览": "img/地图/tilesets/world_preview.jpg",
+		"tileSize": 64,
+		"cols": 488,
+		"rows": 408,
+		"atlasCols": 147,
+		"unique": 21567,
+		"瓦片": "img/地图/tiles/world"
+	},
+	{
+		"id": "拉巴尔",
+		"名称": "拉巴尔",
+		"图片": "img/地图/拉巴尔.png"
+	},
+	{
+		"id": "拉巴尔-传送屋",
+		"名称": "拉巴尔-传送屋",
+		"图片": "img/地图/拉巴尔-传送屋.png"
+	},
+	{
+		"id": "拉巴尔-酒馆",
+		"名称": "拉巴尔-酒馆",
+		"图片": "img/地图/拉巴尔-酒馆.png"
+	},
+	{
+		"id": "tile-test",
+		"名称": "图块测试",
+		"图块": "img/地图/tilesets/tile-test.png",
+		"图块数据": "data/地图图块/tile-test.bin",
+		"图块预览": "img/地图/tilesets/tile-test_preview.jpg",
+		"tileSize": 64,
+		"宽": 640,
+		"高": 384,
+		"cols": 10,
+		"rows": 6,
+		"atlasCols": 2,
+		"unique": 3
+	}
+]

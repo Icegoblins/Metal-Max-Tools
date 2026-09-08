@@ -1,0 +1,58 @@
+# 将 dist/ 中的游戏数据（非 UI 页面）部署到 GitHub Pages，供桌面端拉取更新。
+name: Deploy data to Pages
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "dist/data/**"
+      - "dist/img/**"
+      - "dist/config.json"
+      - "dist/manifest.json"
+      - "dist/audio/**"
+      - "dist/fonts/**"
+      - ".github/workflows/deploy-data.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-data
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Assemble Pages site (data only)
+        run: |
+          set -e
+          SITE=pages-site
+          rm -rf "$SITE"
+          mkdir -p "$SITE"
+          cp dist/manifest.json "$SITE/" 2>/dev/null || echo '{"version":"0","pagesBase":"/","files":{}}' > "$SITE/manifest.json"
+          cp dist/config.json "$SITE/" 2>/dev/null || true
+          cp -r dist/data "$SITE/" 2>/dev/null || true
+          cp -r dist/img "$SITE/" 2>/dev/null || true
+          cp -r dist/audio "$SITE/" 2>/dev/null || true
+          cp -r dist/fonts "$SITE/" 2>/dev/null || true
+          echo "Pages site files:"
+          find "$SITE" -type f | head -50
+          echo "Total files: $(find "$SITE" -type f | wc -l)"
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: pages-site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

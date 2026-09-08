@@ -1,0 +1,10 @@
+{
+  "rules": [
+    {
+      "match": "1.",
+      "type": "prefix",
+      "group": "初代曲目"
+    }
+  ],
+  "songs": {}
+}

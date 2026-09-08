@@ -1,0 +1,192 @@
+{
+ "sources": [
+  {
+   "name": "PixPin_2026-09-07_11-13-11.png",
+   "x": 0,
+   "y": 0,
+   "order": 0,
+   "placed": true,
+   "manual": true
+  },
+  {
+   "name": "PixPin_2026-09-07_11-14-11.png",
+   "x": -128,
+   "y": 256,
+   "order": 1,
+   "placed": true,
+   "manual": true
+  },
+  {
+   "name": "PixPin_2026-09-07_11-14-19.png",
+   "x": 192,
+   "y": 384,
+   "order": 2,
+   "placed": true,
+   "manual": true
+  },
+  {
+   "name": "PixPin_2026-09-07_11-14-30.png",
+   "x": 512,
+   "y": 768,
+   "order": 3,
+   "placed": true,
+   "manual": true
+  },
+  {
+   "name": "PixPin_2026-09-07_11-14-41.png",
+   "x": 960,
+   "y": 640,
+   "order": 4,
+   "placed": true,
+   "manual": false
+  },
+  {
+   "name": "PixPin_2026-09-07_11-14-49.png",
+   "x": 960,
+   "y": 384,
+   "order": 5,
+   "placed": true,
+   "manual": true
+  },
+  {
+   "name": "PixPin_2026-09-07_11-14-57.png",
+   "x": 1280,
+   "y": 256,
+   "order": 6,
+   "placed": true,
+   "manual": true
+  },
+  {
+   "name": "PixPin_2026-09-07_11-15-04.png",
+   "x": 1536,
+   "y": 512,
+   "order": 7,
+   "placed": true,
+   "manual": true
+  },
+  {
+   "name": "PixPin_2026-09-07_11-15-10.png",
+   "x": 0,
+   "y": 0,
+   "order": 8,
+   "placed": false,
+   "manual": false
+  },
+  {
+   "name": "PixPin_2026-09-07_11-15-22.png",
+   "x": 0,
+   "y": 0,
+   "order": 9,
+   "placed": false,
+   "manual": false
+  },
+  {
+   "name": "PixPin_2026-09-07_11-15-30.png",
+   "x": 0,
+   "y": 0,
+   "order": 10,
+   "placed": false,
+   "manual": false
+  },
+  {
+   "name": "PixPin_2026-09-07_11-15-37.png",
+   "x": 0,
+   "y": 0,
+   "order": 11,
+   "placed": false,
+   "manual": false
+  },
+  {
+   "name": "PixPin_2026-09-07_11-15-43.png",
+   "x": 0,
+   "y": 0,
+   "order": 12,
+   "placed": false,
+   "manual": false
+  },
+  {
+   "name": "PixPin_2026-09-07_11-15-53.png",
+   "x": 0,
+   "y": 0,
+   "order": 13,
+   "placed": false,
+   "manual": false
+  },
+  {
+   "name": "PixPin_2026-09-07_11-16-14.png",
+   "x": 0,
+   "y": 0,
+   "order": 14,
+   "placed": false,
+   "manual": false
+  },
+  {
+   "name": "PixPin_2026-09-07_11-16-22.png",
+   "x": 0,
+   "y": 0,
+   "order": 15,
+   "placed": false,
+   "manual": false
+  },
+  {
+   "name": "PixPin_2026-09-07_11-16-30.png",
+   "x": 0,
+   "y": 0,
+   "order": 16,
+   "placed": false,
+   "manual": false
+  }
+ ],
+ "patches": [
+  {
+   "x": 718,
+   "y": 386,
+   "w": 315,
+   "h": 78,
+   "name": "PixPin_2026-09-07_11-13-11.png",
+   "sx": 718,
+   "sy": 386,
+   "visible": false
+  },
+  {
+   "x": 397,
+   "y": 257,
+   "w": 318,
+   "h": 78,
+   "name": "PixPin_2026-09-07_11-13-11.png",
+   "sx": 397,
+   "sy": 257,
+   "visible": false
+  },
+  {
+   "x": 736,
+   "y": 822,
+   "w": 132,
+   "h": 71,
+   "name": "PixPin_2026-09-07_11-13-11.png",
+   "sx": 736,
+   "sy": 822,
+   "visible": false
+  },
+  {
+   "x": 1559,
+   "y": 819,
+   "w": 142,
+   "h": 77,
+   "name": "PixPin_2026-09-07_11-14-30.png",
+   "sx": 1047,
+   "sy": 51,
+   "visible": false
+  },
+  {
+   "x": 1824,
+   "y": 691,
+   "w": 132,
+   "h": 71,
+   "name": "PixPin_2026-09-07_11-14-41.png",
+   "sx": 864,
+   "sy": 51,
+   "visible": false
+  }
+ ]
+}
