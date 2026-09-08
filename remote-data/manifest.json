@@ -6,6 +6,10 @@
 			"sha256": "1394d52999a06db9fdb26b77b61b87c010e832e515492b1faa6ad01f220cd992",
 			"size": 182
 		},
+		"music-manifest.json": {
+			"sha256": "45992fadfe3410db1f6b4ebf24ac0b55c5ed0ddd5c2c04406eb45cd55673252d",
+			"size": 13988
+		},
 		"audio/lens-zoom.wav": {
 			"sha256": "89e1c2b1f374fefbade428561a58606bec55256493ffbf22e4edd6bd8dde791d",
 			"size": 367740

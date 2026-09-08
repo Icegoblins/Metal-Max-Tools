@@ -1,0 +1,435 @@
+{
+	"version": "2026.09.09",
+	"zipUrl": "https://github.com/Icegoblins/Metal-Max-Tools/releases/download/data-2026.09.09/music.zip",
+	"zipSha256": "fd5b0c8d210c862b6f75e897eb0c2923baef2e60e8650422d8e1bbbe94e988eb",
+	"zipSize": 274166319,
+	"files": {
+		"1.01. メタルマックス・メインテーマ.m4a": {
+			"sha256": "5ceb3047467695ddb6a34832a6e26ad7a0ae472e6551e46ee6acf069e4eef18b",
+			"size": 4052533,
+			"compressSize": 4037638,
+			"compression": 8,
+			"dataOffset": 82
+		},
+		"1.02. コール.m4a": {
+			"sha256": "f95f23a1e5fc2b975704375b54e2df2f050efddd3ca700b7aa005c339bd794e6",
+			"size": 4420937,
+			"compressSize": 4402405,
+			"compression": 8,
+			"dataOffset": 4037769
+		},
+		"1.03. エンドレス・レイン.m4a": {
+			"sha256": "5ff5821c8961af64661bfb1566e89d8c3e759289266d72194f29accb8ca20a7e",
+			"size": 2662384,
+			"compressSize": 2649171,
+			"compression": 8,
+			"dataOffset": 8440241
+		},
+		"1.04. 危機.m4a": {
+			"sha256": "4d4fbd1707e3a8325dd62ab9f6dc3e40fb3a38678ea7c408df84741f39e35399",
+			"size": 4410868,
+			"compressSize": 4396563,
+			"compression": 8,
+			"dataOffset": 11089458
+		},
+		"1.05. インカミング.m4a": {
+			"sha256": "9ecae16a33f486cc3aed7c7d951d6feee036dee212afaf64504eafbaa2fc3862",
+			"size": 567606,
+			"compressSize": 559952,
+			"compression": 8,
+			"dataOffset": 15486079
+		},
+		"1.06. バトル.m4a": {
+			"sha256": "a428eb5f507996f12d1488fe4cec4c3c24ac1c30c0bc928debc4ddd31173e914",
+			"size": 4280045,
+			"compressSize": 4264441,
+			"compression": 8,
+			"dataOffset": 16046080
+		},
+		"1.07. 勝利.m4a": {
+			"sha256": "6a93b4f707a373cf3a8af86b735f3dfa434ad4c193247127b92e68ddd843c27f",
+			"size": 3092707,
+			"compressSize": 3080138,
+			"compression": 8,
+			"dataOffset": 20310567
+		},
+		"1.08. WANTED!.m4a": {
+			"sha256": "57bac8e2348fc1f07fbf7bc4193342ec6924b21caf0dd1381e48ed8c3645c99e",
+			"size": 3843611,
+			"compressSize": 3829155,
+			"compression": 8,
+			"dataOffset": 23390752
+		},
+		"1.09. 全滅.m4a": {
+			"sha256": "0de24892a94ff3d19e29462a4b205ce03e17ae3d36075f89ad030715f5cf8010",
+			"size": 3699896,
+			"compressSize": 3684027,
+			"compression": 8,
+			"dataOffset": 27219953
+		},
+		"1.10. スクラップ・タウン.m4a": {
+			"sha256": "91caa5e9dbfe050e422151039e31cc0b26a9ba348902882c95222b9b8956789c",
+			"size": 4419090,
+			"compressSize": 4401272,
+			"compression": 8,
+			"dataOffset": 30904047
+		},
+		"1.11. 忘れえぬ人.m4a": {
+			"sha256": "334f81e9865eff82812fa1c0b1496df81971a18c5dee2d1fba1dded9a64fb2d7",
+			"size": 4540704,
+			"compressSize": 4523239,
+			"compression": 8,
+			"dataOffset": 35305374
+		},
+		"1.12. 愛のテーマ.m4a": {
+			"sha256": "3667cf08777121334c5576bfbda8f9ec78fefe347d183e66b469b0f656ec4761",
+			"size": 3656832,
+			"compressSize": 3641262,
+			"compression": 8,
+			"dataOffset": 39828668
+		},
+		"1.13. 錆びた荒野.m4a": {
+			"sha256": "ef18968994a6243a375b808ec70bf0797e13a51de02bd9864e01873640427a88",
+			"size": 4494714,
+			"compressSize": 4476733,
+			"compression": 8,
+			"dataOffset": 43469985
+		},
+		"1.14. Dr.ミンチに会いましょう.m4a": {
+			"sha256": "19effeea774fc2d9233b620150026e09ff65c7f239a8724b0da7a833c9275082",
+			"size": 6675002,
+			"compressSize": 6650841,
+			"compression": 8,
+			"dataOffset": 47946791
+		},
+		"1.15. エルニニョ.m4a": {
+			"sha256": "a671b217fa5b1540c6a83d936ca0391459763bb88b9e472194fd1c28dc26392d",
+			"size": 5307410,
+			"compressSize": 5286993,
+			"compression": 8,
+			"dataOffset": 54597687
+		},
+		"1.16. タンクウォッカ.m4a": {
+			"sha256": "f8839c86c032cec0b7b5acb9671e00c96fe02fd47694303576f4bfb6df2d6c0e",
+			"size": 1876656,
+			"compressSize": 1866443,
+			"compression": 8,
+			"dataOffset": 59884741
+		},
+		"1.17. ルート99.m4a": {
+			"sha256": "97a8136fe5c6f5380e1de35f77be0c7a0feecfb3832765bd1c09646d8575dc57",
+			"size": 5574250,
+			"compressSize": 5553420,
+			"compression": 8,
+			"dataOffset": 61751235
+		},
+		"1.18. フォックス・トロット.m4a": {
+			"sha256": "e91bb2aed0c20462f63e989be659a7093a209bd7fb25d840b3c25adf1291511a",
+			"size": 4834993,
+			"compressSize": 4819848,
+			"compression": 8,
+			"dataOffset": 67304725
+		},
+		"1.19. 地獄のフリーウェイ.m4a": {
+			"sha256": "302da7e9185303f913c88fe15f9161053d741a95a024e54f38f0f5a14a31d86c",
+			"size": 5388062,
+			"compressSize": 5366859,
+			"compression": 8,
+			"dataOffset": 72124640
+		},
+		"1.20. 激闘.m4a": {
+			"sha256": "0a0d130116e16a95f21b3f4828397c9c258452d50ce3ffef8c18e67d22323d58",
+			"size": 3914111,
+			"compressSize": 3897837,
+			"compression": 8,
+			"dataOffset": 77491545
+		},
+		"1.21. レベルアップ.m4a": {
+			"sha256": "d89cb876ce030c3267fac86c5ea39d99d41b517f4a16b185a14ad56372f17012",
+			"size": 684250,
+			"compressSize": 676948,
+			"compression": 8,
+			"dataOffset": 81389440
+		},
+		"1.22. 定期船で行こう!.m4a": {
+			"sha256": "9a2dae133404634e6b8ae1e4f18de0a3bf188c1499840e8456057a4805878760",
+			"size": 3343470,
+			"compressSize": 3331206,
+			"compression": 8,
+			"dataOffset": 82066450
+		},
+		"1.23. 探検.m4a": {
+			"sha256": "9c834248441ce3e67b57dc6c96f9408ac71ee52691c38d6810444daf3ee20ff5",
+			"size": 4394576,
+			"compressSize": 4377197,
+			"compression": 8,
+			"dataOffset": 85397702
+		},
+		"1.24. お気に召すまま.m4a": {
+			"sha256": "31b2e064e9077bcfb4b45120a4643eb3ffd423390564b725be5131640410258a",
+			"size": 2128350,
+			"compressSize": 2115970,
+			"compression": 8,
+			"dataOffset": 89774960
+		},
+		"1.25. ヴェンジェンス.m4a": {
+			"sha256": "e3d87bbccab08a6304d524959bb39b7902d2901d3ce102cb674b6667b5880123",
+			"size": 5897313,
+			"compressSize": 5878728,
+			"compression": 8,
+			"dataOffset": 91890991
+		},
+		"1.26. キャラバン.m4a": {
+			"sha256": "bbf4f2102bcabf3ffc8c35308991700cd675508a8e18835955a635b355b978c6",
+			"size": 3116388,
+			"compressSize": 3103172,
+			"compression": 8,
+			"dataOffset": 97769774
+		},
+		"1.27. 流されてイスラポルト.m4a": {
+			"sha256": "554dbaafd694ef3347e6871f380d3681e2e5c37edb6c88b8a7b81b42b78fcf81",
+			"size": 2311822,
+			"compressSize": 2300699,
+			"compression": 8,
+			"dataOffset": 100873016
+		},
+		"1.28. ネメシス.m4a": {
+			"sha256": "7cec65b944760c22d17ca8464fac52a004563dc2a5ab887b99f56d1dd007fcf0",
+			"size": 5736675,
+			"compressSize": 5715419,
+			"compression": 8,
+			"dataOffset": 103173767
+		},
+		"1.29. 流れ者の歌.m4a": {
+			"sha256": "1b1a8e7fd1d498235cc10845ad7157f69d22124bd360867c9586ec0c5e18bdb8",
+			"size": 5947783,
+			"compressSize": 5926176,
+			"compression": 8,
+			"dataOffset": 108889241
+		},
+		"1.30. 「愛のテーマ」オルゴールver..m4a": {
+			"sha256": "da730b65da67744487821c9f4de4d36548db0de6220e593b54a6109a12259d76",
+			"size": 2152033,
+			"compressSize": 2141523,
+			"compression": 8,
+			"dataOffset": 114815497
+		},
+		"1.31. 迷宮狩り.m4a": {
+			"sha256": "2b77384d336bd0c4f1f9c855ae3369bb9c60660f47616d2e747375aea25c9cef",
+			"size": 7750473,
+			"compressSize": 7725621,
+			"compression": 8,
+			"dataOffset": 116957072
+		},
+		"1.32. あやかし.m4a": {
+			"sha256": "8f9f59723793bff8f126989e5d10cef817fdd538be246a2585840f77679e7e05",
+			"size": 5484375,
+			"compressSize": 5465873,
+			"compression": 8,
+			"dataOffset": 124682745
+		},
+		"1.33. バイアス・シティ.m4a": {
+			"sha256": "4bdb4dd7e098808ce4831cf566177a9553cefee318d96afd0c26e216723b07ef",
+			"size": 2910654,
+			"compressSize": 2896930,
+			"compression": 8,
+			"dataOffset": 130148682
+		},
+		"1.34. レッドゾーンmore.m4a": {
+			"sha256": "21092fd58cbab9506178741b2d1c82d62f3f823d0cb9a52238e911d2f83e86ae",
+			"size": 4372352,
+			"compressSize": 4357816,
+			"compression": 8,
+			"dataOffset": 133045674
+		},
+		"1.35. 賞金首撃破.m4a": {
+			"sha256": "a9d5eab166083f3708c5db5c4d9da8f343ddcbe0c7f96f72f8b43471eee94e1a",
+			"size": 648105,
+			"compressSize": 640761,
+			"compression": 8,
+			"dataOffset": 137403545
+		},
+		"1.36. バイアス・ヴラド.m4a": {
+			"sha256": "e9d7a95f6017cd137c6aef5ce1a20f7dd26e8c254faf06e601661325d444571f",
+			"size": 7386452,
+			"compressSize": 7363024,
+			"compression": 8,
+			"dataOffset": 138044370
+		},
+		"1.37. 崩壊.m4a": {
+			"sha256": "ed442d43d149e5ef876ef9a59d08d749b8c713a72ec28a4b7f1d759fb0e0526e",
+			"size": 1574757,
+			"compressSize": 1565632,
+			"compression": 8,
+			"dataOffset": 145407440
+		},
+		"1.38. フェイクエンディング.m4a": {
+			"sha256": "d738d59e6ab07b7f9332bc5c96466797c6e078c8ec3625ac3887f2461ac82aa8",
+			"size": 4991382,
+			"compressSize": 4971680,
+			"compression": 8,
+			"dataOffset": 146973142
+		},
+		"1.39. エンディング.m4a": {
+			"sha256": "ef9104b932056ca438ae92ae5e3cdf3d040aefe8956a2b0ed0d341af7b56f035",
+			"size": 8024835,
+			"compressSize": 7996428,
+			"compression": 8,
+			"dataOffset": 151944880
+		},
+		"1.40. じゃじゃ馬ならし.m4a": {
+			"sha256": "c14852da33042d109de3664980001d0ec86c71f6f1da142a6c41710d9bb7c304",
+			"size": 1988860,
+			"compressSize": 1977259,
+			"compression": 8,
+			"dataOffset": 159941372
+		},
+		"1.41. アニマル・パレード.m4a": {
+			"sha256": "9c3a606e2973cb6638f0a17e33f04decada998e44a0836f4402fa9beb136e3b3",
+			"size": 1559971,
+			"compressSize": 1551446,
+			"compression": 8,
+			"dataOffset": 161918698
+		},
+		"1.42. 戦車でバンバン!.m4a": {
+			"sha256": "03aeb78646650cd0392f72c830d7a29c713640f9236b751d6bfddcf81c767b09",
+			"size": 2206795,
+			"compressSize": 2195493,
+			"compression": 8,
+			"dataOffset": 163470206
+		},
+		"1.43. 宿屋.m4a": {
+			"sha256": "3b00c6727ef02e4d5f4b57d44a81876133acd7739d3ff03c8cbe7c46fe2adc15",
+			"size": 618675,
+			"compressSize": 610303,
+			"compression": 8,
+			"dataOffset": 165665745
+		},
+		"1.44. 宿屋VIP.m4a": {
+			"sha256": "0cc67f7965b210ee5d92b6c15e85a0acb5982fe47d41bb6c9101c4db445de091",
+			"size": 652863,
+			"compressSize": 645234,
+			"compression": 8,
+			"dataOffset": 166276097
+		},
+		"1.45. クエスト・コンプリート.m4a": {
+			"sha256": "02f42c88002940006637c9a5d0c00c424c46421eba736b980da3cdf7e98b4c8f",
+			"size": 766487,
+			"compressSize": 759568,
+			"compression": 8,
+			"dataOffset": 166921404
+		},
+		"1.46. ファンファーレ.m4a": {
+			"sha256": "94f640be4f140296e274a769193d36eaff31afa5736cc949ee057c0849bbdc1a",
+			"size": 691455,
+			"compressSize": 684198,
+			"compression": 8,
+			"dataOffset": 167681033
+		},
+		"1.47. イグニション.m4a": {
+			"sha256": "c4f52c5485fb3584b387b513e6b82a46dee8c5bd214b857a41d9509b7bd9ffab",
+			"size": 766055,
+			"compressSize": 758376,
+			"compression": 8,
+			"dataOffset": 168365289
+		},
+		"2.01. メタルマックス・メインテーマ.m4a": {
+			"sha256": "109617ea09a5ab90a59e58caa28020a742ed80c26864bf198e69b5221e1face0",
+			"size": 5138599,
+			"compressSize": 5122174,
+			"compression": 8,
+			"dataOffset": 169123747
+		},
+		"2.02. 地獄は満員.m4a": {
+			"sha256": "02e929293434f15fbb29983f9df621e97108c061beef3a3897b06408f4b3acbb",
+			"size": 7339170,
+			"compressSize": 7312468,
+			"compression": 8,
+			"dataOffset": 174245976
+		},
+		"2.03. 地獄のフリーウェイ.m4a": {
+			"sha256": "8623ea24ac55de023dd9ed7ce3b8e3e4667b91c3d5350e667950e4bfac35ed9a",
+			"size": 9101698,
+			"compressSize": 9069555,
+			"compression": 8,
+			"dataOffset": 181558511
+		},
+		"2.04. キャタピラビレッジ.m4a": {
+			"sha256": "7529149d4b172f95afff909347e3c297d06ba53b6aa7726a074502a6d7a4ed96",
+			"size": 9226244,
+			"compressSize": 9197185,
+			"compression": 8,
+			"dataOffset": 190628133
+		},
+		"2.05. 忘れえぬ人.m4a": {
+			"sha256": "76478dae7f448135596c5f2ed87dfb02dc4f4d6afde61fc3c1cc53cc09d5045b",
+			"size": 9219772,
+			"compressSize": 9189773,
+			"compression": 8,
+			"dataOffset": 199825373
+		},
+		"2.06. 激闘.m4a": {
+			"sha256": "3c5f0c09d4590f8f9055569ceefea10e6b7184f1db6c1ecaf4f5ed7ecf18fce5",
+			"size": 10086286,
+			"compressSize": 10050870,
+			"compression": 8,
+			"dataOffset": 209015192
+		},
+		"2.07. レッドゾーン more.m4a": {
+			"sha256": "e0409199b25bf4737dbb8bb4fca18aa6aa5af7e088da66ea04abcb950ee03305",
+			"size": 7441759,
+			"compressSize": 7418129,
+			"compression": 8,
+			"dataOffset": 219066125
+		},
+		"2.08. 涙の7mm機関砲.m4a": {
+			"sha256": "9e81b7377502e12810aab5b3098379808ca7324cd55ba54a317c914c7ef23a1a",
+			"size": 4459810,
+			"compressSize": 4442598,
+			"compression": 8,
+			"dataOffset": 226484312
+		},
+		"2.09. ノアとの戦い.m4a": {
+			"sha256": "9ef1d53b797901f885f4e9c93ee5be5cc2a02321b6b7ad6b2d4b5066285b9ae1",
+			"size": 7585014,
+			"compressSize": 7558921,
+			"compression": 8,
+			"dataOffset": 230926968
+		},
+		"2.10. バイアス・ヴラド.m4a": {
+			"sha256": "6f6f6824fbec13610743c4cc7dd58f8af48141faed5d41526af4c33db7b5681c",
+			"size": 8890716,
+			"compressSize": 8863371,
+			"compression": 8,
+			"dataOffset": 238485953
+		},
+		"2.11. WANTED!(Extreme mix).m4a": {
+			"sha256": "462e0daa5eacb8c491050373ddd72ab27847ab43fd417c4c36698d0d5e6ae39b",
+			"size": 6784716,
+			"compressSize": 6761352,
+			"compression": 8,
+			"dataOffset": 247349384
+		},
+		"2.12. Crying Sun.m4a": {
+			"sha256": "0922795672a890ae7865131c113b0e8296c4001d5be613160b19af78c2d6666e",
+			"size": 9404929,
+			"compressSize": 9374786,
+			"compression": 8,
+			"dataOffset": 254110786
+		},
+		"2.13. Crying Sun(KADOCKS & Mr.BEATS Remix).m4a": {
+			"sha256": "4709c1ec40ec10a04e67e8e57be39d31010fc52b461599a18d997be0c070c813",
+			"size": 10620496,
+			"compressSize": 10586963,
+			"compression": 8,
+			"dataOffset": 263485648
+		},
+		"default.jpg": {
+			"sha256": "10c5b588d23abf8cdeeaad08c07368ff47f18d89b50d6befad2a1d629626dbc0",
+			"size": 89197,
+			"compressSize": 89079,
+			"compression": 8,
+			"dataOffset": 274072652
+		}
+	}
+}
