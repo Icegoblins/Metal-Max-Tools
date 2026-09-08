@@ -1,0 +1,8 @@
+# 数据文件按二进制入库，避免 autocrlf 改写 JSON/图片 hash
+remote-data/data/** -text
+remote-data/img/** -text
+remote-data/audio/** -text
+remote-data/fonts/** -text
+remote-data/manifest.json -text
+remote-data/music-manifest.json -text
+remote-data/config.json text eol=lf

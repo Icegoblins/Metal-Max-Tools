@@ -2,6 +2,7 @@
 /*
 
 !.gitignore
+!.gitattributes
 !remote-data/
 !remote-data/**
 !.github/
