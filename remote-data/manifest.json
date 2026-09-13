@@ -1,5 +1,5 @@
 {
-	"version": "2026.09.14_0547",
+	"version": "2026.09.14_0627",
 	"pagesBase": "https://Icegoblins.github.io/Metal-Max-Tools/",
 	"files": {
 		"config.json": {
@@ -38,9 +38,13 @@
 			"sha256": "0288e9e61b8ac0697fdcef9e6ce43eba95b8befa82637446f05ae7d22fe73c2a",
 			"size": 17
 		},
-		"data/地图点位.json": {
+		"data/地图点位.backup.json": {
 			"sha256": "0288e9e61b8ac0697fdcef9e6ce43eba95b8befa82637446f05ae7d22fe73c2a",
 			"size": 17
+		},
+		"data/地图点位.json": {
+			"sha256": "ecea45b597c2ffba8f153778c23238942140c571522500ca32bcd0b25ab61ef8",
+			"size": 44254
 		},
 		"data/怪物数据.json": {
 			"sha256": "f5063a3bc30abe94650f21aef1f8f64dab05e2be8d9d4830684a380b05209cc8",
