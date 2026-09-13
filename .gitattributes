@@ -4,5 +4,4 @@ remote-data/img/** -text
 remote-data/audio/** -text
 remote-data/fonts/** -text
 remote-data/manifest.json -text
-remote-data/music-manifest.json -text
 remote-data/config.json text eol=lf
