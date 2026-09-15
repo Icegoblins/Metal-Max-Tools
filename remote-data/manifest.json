@@ -1,5 +1,5 @@
 {
-	"version": "2026.09.14_0627",
+	"version": "2026.09.15_1715",
 	"pagesBase": "https://Icegoblins.github.io/Metal-Max-Tools/",
 	"files": {
 		"config.json": {
@@ -15,40 +15,36 @@
 			"size": 4812
 		},
 		"data/人类道具.json": {
-			"sha256": "d4acfc8d3af19eea3760ef065b2658ef5c2393f05d1f250ee668689fe445136d",
-			"size": 7939
+			"sha256": "0593a6edf25f73c5978c6ef17e304ea897ea484a2d847173359e01761d998c00",
+			"size": 8680
 		},
 		"data/人类防具.json": {
 			"sha256": "bb392f0cddfb565f0e73e382e8e9a627a5ed145e99158b19a8f4c88dadbbd454",
 			"size": 17658
 		},
 		"data/冒险指南.json": {
-			"sha256": "1ef45b8db7ae3f88f442f741a52db431190dc83d863e82ab5d5906daa90c71be",
-			"size": 4886
+			"sha256": "cd53f9189e8292ba578b8792ebdb43f9ffff4a6af167c2815f53e30453776827",
+			"size": 3975
 		},
 		"data/区域遇敌.json": {
-			"sha256": "34cf5a92f97173083d29b363f57060813af66acee794631581c914f21b4c34c2",
-			"size": 9229
+			"sha256": "71633a497417121900529c91caa9fdfe3f97a4b04332ad174ffe9d8fe34f1a5f",
+			"size": 16972
 		},
 		"data/地图.json": {
-			"sha256": "e6084c6ab0f89250ca50a74b8d164efe20d3a4e5baba2c7f54f57dfb293f1dfa",
-			"size": 5694
+			"sha256": "a6612fcacda091ecb64d224ab2fd9f0b1d093b2a819c7d75f44e84ff7ede16e1",
+			"size": 11849
 		},
 		"data/地图区域.json": {
 			"sha256": "0288e9e61b8ac0697fdcef9e6ce43eba95b8befa82637446f05ae7d22fe73c2a",
 			"size": 17
 		},
-		"data/地图点位.backup.json": {
-			"sha256": "0288e9e61b8ac0697fdcef9e6ce43eba95b8befa82637446f05ae7d22fe73c2a",
-			"size": 17
-		},
 		"data/地图点位.json": {
-			"sha256": "ecea45b597c2ffba8f153778c23238942140c571522500ca32bcd0b25ab61ef8",
-			"size": 44254
+			"sha256": "685ae819a723e764ba407dde36561b224548e886a026e4f99dcc859b58c87fbf",
+			"size": 281486
 		},
 		"data/怪物数据.json": {
-			"sha256": "f5063a3bc30abe94650f21aef1f8f64dab05e2be8d9d4830684a380b05209cc8",
-			"size": 72768
+			"sha256": "522f67c73eef26290e428813d0f1c249e31a697175cf6bda113b42557020a427",
+			"size": 70669
 		},
 		"data/战车.json": {
 			"sha256": "26a157c3e8e54818a72706ceb852f1fbd81db65cf9e7f360ea9a257790532192",
@@ -63,16 +59,16 @@
 			"size": 2096
 		},
 		"data/特殊炮弹.json": {
-			"sha256": "52910668ae21f1fcc4a7840781000a531562ac2347a41604872a4d9b3577557a",
-			"size": 1397
+			"sha256": "d0b2d4ddb3f31974490ebfba89cd23992d180c3cab6c27c9a96d4c5d4c43d857",
+			"size": 1779
 		},
 		"data/称号.json": {
 			"sha256": "744a6f7bebf5fb99d3256a4746634f730115d9f6571abca25215609ad9305510",
 			"size": 1096
 		},
 		"data/赏金首.json": {
-			"sha256": "9bb7324fe809c09bed574243631416c06b6e1ea26af46fb7a8e59d13f0eea106",
-			"size": 13821
+			"sha256": "bf495872726ff8e4eab930fa6aea6df502914238f75aee87735f632acdd7b4d0",
+			"size": 13739
 		},
 		"data/链装.json": {
 			"sha256": "f6707eb4422b20d8f6c6fbbff9c6c6f05bba8f76a100d3f549c253b8ec927c1b",
@@ -182,6 +178,162 @@
 			"sha256": "913057ac801e9ba38002856f1565c893f99c285c01aa96355df7932ac8c4bddb",
 			"size": 121
 		},
+		"img/地图/内基_人类用品店1F.mapmeta.json": {
+			"sha256": "26be9382195fdfe8336f79ebb176725d92e463bf0514122c690ccfa4ed326739",
+			"size": 119
+		},
+		"img/地图/内基_人类用品店1F.png": {
+			"sha256": "06c1b8c5da4aced15987f2432d1195e57ec2dc46b39e5775f55512fe0c11aaf8",
+			"size": 15982
+		},
+		"img/地图/内基_人类用品店1F.png.mapmeta.json": {
+			"sha256": "26be9382195fdfe8336f79ebb176725d92e463bf0514122c690ccfa4ed326739",
+			"size": 119
+		},
+		"img/地图/内基_人类用品店2F.mapmeta.json": {
+			"sha256": "07277bf4bc9d515d55612ff5d00e079cfdc209f9552cbe708acfa83633fdabee",
+			"size": 118
+		},
+		"img/地图/内基_人类用品店2F.png": {
+			"sha256": "d6c574cf2e046abf5927aa232fe1eb33f4af67d6d3f8241eec032f2da6247588",
+			"size": 9982
+		},
+		"img/地图/内基_人类用品店2F.png.mapmeta.json": {
+			"sha256": "07277bf4bc9d515d55612ff5d00e079cfdc209f9552cbe708acfa83633fdabee",
+			"size": 118
+		},
+		"img/地图/内基_仓库.mapmeta.json": {
+			"sha256": "5fda621e2a80fbb27758b12390517a3ade6f0f34498cb6fead194b2db3959357",
+			"size": 118
+		},
+		"img/地图/内基_仓库.png": {
+			"sha256": "2cce9fc1c3acddd7a448adc2fe02dc6f8ac49919877f000f53c4530e2dd7e188",
+			"size": 7612
+		},
+		"img/地图/内基_仓库.png.mapmeta.json": {
+			"sha256": "5fda621e2a80fbb27758b12390517a3ade6f0f34498cb6fead194b2db3959357",
+			"size": 118
+		},
+		"img/地图/内基_传送装置.mapmeta.json": {
+			"sha256": "b6f0366bfacce70563f969940c538e445302906f13c941836ee611e5c7609f5c",
+			"size": 120
+		},
+		"img/地图/内基_传送装置.png": {
+			"sha256": "87e120bf46ebd397c00a122fa8665fc885b5afb1d3d686d528916c81dbd7dd71",
+			"size": 15953
+		},
+		"img/地图/内基_传送装置.png.mapmeta.json": {
+			"sha256": "b6f0366bfacce70563f969940c538e445302906f13c941836ee611e5c7609f5c",
+			"size": 120
+		},
+		"img/地图/内基_卡伦的家.mapmeta.json": {
+			"sha256": "8001a9424e3a7bcfbde374d17c772ef80e1a9464fa32e7728c20df819f47633b",
+			"size": 118
+		},
+		"img/地图/内基_卡伦的家.png": {
+			"sha256": "a18d1ed5929118a76a721cef2262153355da01d6f12a283b3c0c86c6a314a3dd",
+			"size": 15881
+		},
+		"img/地图/内基_卡伦的家.png.mapmeta.json": {
+			"sha256": "8001a9424e3a7bcfbde374d17c772ef80e1a9464fa32e7728c20df819f47633b",
+			"size": 118
+		},
+		"img/地图/内基_废弃的房屋.mapmeta.json": {
+			"sha256": "0a0646ca9ad6f8c66d73b0a1998292a5370e2085a5603696bb39920402cc15fb",
+			"size": 120
+		},
+		"img/地图/内基_废弃的房屋.png": {
+			"sha256": "447743fafcba4d2a3bd822a4d0a1c29c7e6645ca36cf968088b4abbc7572fcaf",
+			"size": 16418
+		},
+		"img/地图/内基_废弃的房屋.png.mapmeta.json": {
+			"sha256": "0a0646ca9ad6f8c66d73b0a1998292a5370e2085a5603696bb39920402cc15fb",
+			"size": 120
+		},
+		"img/地图/内基_旅店.mapmeta.json": {
+			"sha256": "8e8bba8f91434879c0df836d4b1f2da207f9b80ed571b112e8feb9c1953ce96b",
+			"size": 121
+		},
+		"img/地图/内基_旅店.png": {
+			"sha256": "eb8b3de7c54b5920b3f986718bbb2a4ff5e143e6e90deef48717e23a835e1369",
+			"size": 14240
+		},
+		"img/地图/内基_旅店.png.mapmeta.json": {
+			"sha256": "8e8bba8f91434879c0df836d4b1f2da207f9b80ed571b112e8feb9c1953ce96b",
+			"size": 121
+		},
+		"img/地图/内基_虾九郎的家.mapmeta.json": {
+			"sha256": "8642765f6b0755cd3e226e9a10272cc5899109a5851591aeb569974d0a4cc809",
+			"size": 119
+		},
+		"img/地图/内基_虾九郎的家.png": {
+			"sha256": "f63d7d1f9f7cc9d70ca3b9f2023267df5e60ea74c290ee15e2d339b891db20a4",
+			"size": 14143
+		},
+		"img/地图/内基_虾九郎的家.png.mapmeta.json": {
+			"sha256": "8642765f6b0755cd3e226e9a10272cc5899109a5851591aeb569974d0a4cc809",
+			"size": 119
+		},
+		"img/地图/内基_里奥的家.mapmeta.json": {
+			"sha256": "d3e1fe5f19d739841d0d60227a2e970b0831ca0c599f65842f2f3c11e0ca5f81",
+			"size": 118
+		},
+		"img/地图/内基_里奥的家.png": {
+			"sha256": "0013e3580e82479bf4efec5aa163cea323131a0b1ec9843d36f25c686a80d1b6",
+			"size": 17958
+		},
+		"img/地图/内基_里奥的家.png.mapmeta.json": {
+			"sha256": "d3e1fe5f19d739841d0d60227a2e970b0831ca0c599f65842f2f3c11e0ca5f81",
+			"size": 118
+		},
+		"img/地图/北方洞窟1F.mapmeta.json": {
+			"sha256": "f86a6a1da5f5867ad2d83624158ca7e2ec17b3055b4fd0bbadfbb9dd574e387d",
+			"size": 118
+		},
+		"img/地图/北方洞窟1F.png": {
+			"sha256": "62a048ed8d1faf1a730db049dab3f7935681ef0bd26595e6b3ce0a01a0fc7bdb",
+			"size": 208014
+		},
+		"img/地图/北方洞窟1F.png.mapmeta.json": {
+			"sha256": "f86a6a1da5f5867ad2d83624158ca7e2ec17b3055b4fd0bbadfbb9dd574e387d",
+			"size": 118
+		},
+		"img/地图/北方洞窟B1.mapmeta.json": {
+			"sha256": "836829099902cfba398dccea7fd6b9e43698a4bc391ab1255aa2d30cb6f58423",
+			"size": 116
+		},
+		"img/地图/北方洞窟B1.png": {
+			"sha256": "8f88719c40be20cbb5dce3987db1ff5878d118d5f19cd546377f871b7b5420be",
+			"size": 130766
+		},
+		"img/地图/北方洞窟B1.png.mapmeta.json": {
+			"sha256": "836829099902cfba398dccea7fd6b9e43698a4bc391ab1255aa2d30cb6f58423",
+			"size": 116
+		},
+		"img/地图/北方洞窟B2.mapmeta.json": {
+			"sha256": "9276e24a2a925df0c4f57d75bb8bc3e3d9347c6bb58ac0fa6afb30664e1d2697",
+			"size": 118
+		},
+		"img/地图/北方洞窟B2.png": {
+			"sha256": "a6193c41dfc602db352d3427b80404c9f34a82dd6e96b2922b1632cb6084ca55",
+			"size": 94216
+		},
+		"img/地图/北方洞窟B2.png.mapmeta.json": {
+			"sha256": "9276e24a2a925df0c4f57d75bb8bc3e3d9347c6bb58ac0fa6afb30664e1d2697",
+			"size": 118
+		},
+		"img/地图/北方洞窟B3.mapmeta.json": {
+			"sha256": "d0a9ffd8d4ab10acdcba8a82bdd06856ad10cfdbff2235503b63f7d0a121af46",
+			"size": 118
+		},
+		"img/地图/北方洞窟B3.png": {
+			"sha256": "ecfce9f5e916672f7ee7dea015737f800f01ac7d7ead39747f2343a6967591aa",
+			"size": 55815
+		},
+		"img/地图/北方洞窟B3.png.mapmeta.json": {
+			"sha256": "d0a9ffd8d4ab10acdcba8a82bdd06856ad10cfdbff2235503b63f7d0a121af46",
+			"size": 118
+		},
 		"img/地图/埃塞林.mapmeta.json": {
 			"sha256": "99dff6a364cfb44c31f59c3fbbee4b2845ab00fa3e935cf477f2a6047405e5e9",
 			"size": 121
@@ -192,6 +344,90 @@
 		},
 		"img/地图/埃塞林.png.mapmeta.json": {
 			"sha256": "99dff6a364cfb44c31f59c3fbbee4b2845ab00fa3e935cf477f2a6047405e5e9",
+			"size": 121
+		},
+		"img/地图/埃塞林_商人营地.mapmeta.json": {
+			"sha256": "39954174240ea7f7e5b2b41a3774c700e6c52ad077f8e12ca83d997fe91ee47b",
+			"size": 119
+		},
+		"img/地图/埃塞林_商人营地.png": {
+			"sha256": "0b39e7375820301af8ff02c4e4aca711b4b36a67ff51efd1f1e18eb3b104bdc9",
+			"size": 9419
+		},
+		"img/地图/埃塞林_商人营地.png.mapmeta.json": {
+			"sha256": "39954174240ea7f7e5b2b41a3774c700e6c52ad077f8e12ca83d997fe91ee47b",
+			"size": 119
+		},
+		"img/地图/埃塞林_埃塞林大楼1F.mapmeta.json": {
+			"sha256": "f2a28a25ae56b957bfb801a6b734ddb32d1ba59bfd18fbabbb23c9ec8a0d37bd",
+			"size": 122
+		},
+		"img/地图/埃塞林_埃塞林大楼1F.png": {
+			"sha256": "9e5c294dd931f1577680562359de6ecac4127b8c0d5d07ebc70611f5c6814097",
+			"size": 39176
+		},
+		"img/地图/埃塞林_埃塞林大楼1F.png.mapmeta.json": {
+			"sha256": "f2a28a25ae56b957bfb801a6b734ddb32d1ba59bfd18fbabbb23c9ec8a0d37bd",
+			"size": 122
+		},
+		"img/地图/埃塞林_埃塞林大楼2F.mapmeta.json": {
+			"sha256": "084018b2c6fed555be854f5ad9277f6646f8615bcbca6874d5836d2be93708c7",
+			"size": 120
+		},
+		"img/地图/埃塞林_埃塞林大楼2F.png": {
+			"sha256": "057031320d63b602691a2c07c380ce3b9a537b8fb1215c69f2da9ea2ddc16a59",
+			"size": 17416
+		},
+		"img/地图/埃塞林_埃塞林大楼2F.png.mapmeta.json": {
+			"sha256": "084018b2c6fed555be854f5ad9277f6646f8615bcbca6874d5836d2be93708c7",
+			"size": 120
+		},
+		"img/地图/埃塞林_埃塞林大楼B1.mapmeta.json": {
+			"sha256": "257634f209399293fb8825c3f852a88bc050d7c88d9d3783fb0974ddcfc9c524",
+			"size": 122
+		},
+		"img/地图/埃塞林_埃塞林大楼B1.png": {
+			"sha256": "953ee658897e551f2f1349ed1bc6e792d2a8c7574b39100f96f31e8fd92f2741",
+			"size": 44730
+		},
+		"img/地图/埃塞林_埃塞林大楼B1.png.mapmeta.json": {
+			"sha256": "257634f209399293fb8825c3f852a88bc050d7c88d9d3783fb0974ddcfc9c524",
+			"size": 122
+		},
+		"img/地图/埃塞林_埃塞林大楼B2.mapmeta.json": {
+			"sha256": "b216bf379a82af40fc04f926e91e435ae2254fca27eae6745d830bea68a17f3f",
+			"size": 122
+		},
+		"img/地图/埃塞林_埃塞林大楼B2.png": {
+			"sha256": "0e85a70d082e6609b49ae0a6b097f25500e71453cd2b26cb0215c113cbeb8a3b",
+			"size": 54290
+		},
+		"img/地图/埃塞林_埃塞林大楼B2.png.mapmeta.json": {
+			"sha256": "b216bf379a82af40fc04f926e91e435ae2254fca27eae6745d830bea68a17f3f",
+			"size": 122
+		},
+		"img/地图/埃塞林_战车服务中心.mapmeta.json": {
+			"sha256": "66fc76b7e9520a580126549abd01f53d09b8bd43b64dd03578bf6a2fda712c2c",
+			"size": 121
+		},
+		"img/地图/埃塞林_战车服务中心.png": {
+			"sha256": "9feae3d60e3a08b62a9fc2c0acdc6547919d950175e7e93b06a52f58e8cf528c",
+			"size": 20738
+		},
+		"img/地图/埃塞林_战车服务中心.png.mapmeta.json": {
+			"sha256": "66fc76b7e9520a580126549abd01f53d09b8bd43b64dd03578bf6a2fda712c2c",
+			"size": 121
+		},
+		"img/地图/埃塞林_流浪者洞穴.mapmeta.json": {
+			"sha256": "8e5c93a48554e87525ede2f193a8c0bcf932125dc828fa5139bde763e1b20619",
+			"size": 121
+		},
+		"img/地图/埃塞林_流浪者洞穴.png": {
+			"sha256": "f170dd0dbd0fb70a861e47daf3a219a14959c5dfccd9991716c2dd43df339e78",
+			"size": 32777
+		},
+		"img/地图/埃塞林_流浪者洞穴.png.mapmeta.json": {
+			"sha256": "8e5c93a48554e87525ede2f193a8c0bcf932125dc828fa5139bde763e1b20619",
 			"size": 121
 		},
 		"img/地图/巴拉巴拉研究所.mapmeta.json": {
@@ -229,6 +465,14 @@
 		"img/地图/拉巴尔_人类用品店.png.mapmeta.json": {
 			"sha256": "3b0704b83581ebe3c717b2728410ecfda07bfc7e4269f9e4e2fd941291a6a8ba",
 			"size": 117
+		},
+		"img/地图/拉巴尔_传送中心.mapmeta.json": {
+			"sha256": "97cb034cb1e449f635e8a1638862dd0bcb55710ab67998f9014fa1ee4c6665d8",
+			"size": 80
+		},
+		"img/地图/拉巴尔_传送中心.png": {
+			"sha256": "f922b48263119ed4eda64ab1ca00f3eb11d160dfd2dfeef8d6ba9c3388046211",
+			"size": 24481
 		},
 		"img/地图/拉巴尔_传送屋.mapmeta.json": {
 			"sha256": "27da6f8ff5a04da42448cda63a923a022afbb9235471876c1298539fbf855557",
@@ -374,6 +618,42 @@
 			"sha256": "8c035856a66c6f304fc9d3156fb09abb3e0778b9fbd63deafb74127db1bda869",
 			"size": 122
 		},
+		"img/地图/盘古研究所.mapmeta.json": {
+			"sha256": "1a310306d8d32e3da406072a7c8f3d4613591671930a4d3e48cfb66164fbb701",
+			"size": 122
+		},
+		"img/地图/盘古研究所.png": {
+			"sha256": "83016cadd650bfeafc953892f744220a38644ba26893b016248c09f9d4f9e1b5",
+			"size": 179014
+		},
+		"img/地图/盘古研究所.png.mapmeta.json": {
+			"sha256": "1a310306d8d32e3da406072a7c8f3d4613591671930a4d3e48cfb66164fbb701",
+			"size": 122
+		},
+		"img/地图/盘古研究所_传送中心.mapmeta.json": {
+			"sha256": "d571075778b1384112b8e3dc4d22d003de32852486e1f6cd09293da63f33d25e",
+			"size": 118
+		},
+		"img/地图/盘古研究所_传送中心.png": {
+			"sha256": "6f3c557465caaef3d7b16819e83480298bd51efa303877de83def36d60b64139",
+			"size": 12321
+		},
+		"img/地图/盘古研究所_传送中心.png.mapmeta.json": {
+			"sha256": "d571075778b1384112b8e3dc4d22d003de32852486e1f6cd09293da63f33d25e",
+			"size": 118
+		},
+		"img/地图/维奇树林深处.mapmeta.json": {
+			"sha256": "90a2c0ad779820957d82c1959c9c00d51e957ca0ce5a65729d69138745d51bbb",
+			"size": 118
+		},
+		"img/地图/维奇树林深处.png": {
+			"sha256": "6f0f7bcce2c9081a4e8451b218d88ac25fafac44f29a3caf61c617e358519104",
+			"size": 209905
+		},
+		"img/地图/维奇树林深处.png.mapmeta.json": {
+			"sha256": "90a2c0ad779820957d82c1959c9c00d51e957ca0ce5a65729d69138745d51bbb",
+			"size": 118
+		},
 		"img/地图/里奥拉多.mapmeta.json": {
 			"sha256": "f1284194fe203e0e52a634cfd62ccb7c3c6eb5c76f16736a9a4b9084483c5bfd",
 			"size": 121
@@ -385,6 +665,130 @@
 		"img/地图/里奥拉多.png.mapmeta.json": {
 			"sha256": "f1284194fe203e0e52a634cfd62ccb7c3c6eb5c76f16736a9a4b9084483c5bfd",
 			"size": 121
+		},
+		"img/地图/里奥拉多_人类用品店.mapmeta.json": {
+			"sha256": "f6e7af81a2292e8ce5cdab1592eabfc5a93e1553ec71de45a8de1ad8d70101cc",
+			"size": 119
+		},
+		"img/地图/里奥拉多_人类用品店.png": {
+			"sha256": "067dad7fb99c0bc638031ef442285a81167073529dc7793338bbb6e4dbe8a844",
+			"size": 15201
+		},
+		"img/地图/里奥拉多_人类用品店.png.mapmeta.json": {
+			"sha256": "f6e7af81a2292e8ce5cdab1592eabfc5a93e1553ec71de45a8de1ad8d70101cc",
+			"size": 119
+		},
+		"img/地图/里奥拉多_传送中心.mapmeta.json": {
+			"sha256": "0813504d8261f748b1228c8eac775604a30584ac9938da0fafa3ff282a53fb75",
+			"size": 120
+		},
+		"img/地图/里奥拉多_传送中心.png": {
+			"sha256": "76a9d956737a56df1e2a2ebfae4bac35dc1a37b7a82556f32a85912ecf04515e",
+			"size": 15898
+		},
+		"img/地图/里奥拉多_传送中心.png.mapmeta.json": {
+			"sha256": "0813504d8261f748b1228c8eac775604a30584ac9938da0fafa3ff282a53fb75",
+			"size": 120
+		},
+		"img/地图/里奥拉多_商人营地.mapmeta.json": {
+			"sha256": "19ac45489fbaa0244f16c6ac920feefc32f7881e3919a84c39ee1069fcbb8d11",
+			"size": 118
+		},
+		"img/地图/里奥拉多_商人营地.png": {
+			"sha256": "e203186952109e960f61e53820e0b92ffa27e9ede5f3b823a2c3188a567a4c97",
+			"size": 10150
+		},
+		"img/地图/里奥拉多_商人营地.png.mapmeta.json": {
+			"sha256": "19ac45489fbaa0244f16c6ac920feefc32f7881e3919a84c39ee1069fcbb8d11",
+			"size": 118
+		},
+		"img/地图/里奥拉多_地下B1.mapmeta.json": {
+			"sha256": "45a44e09332ef3039715705b57ad50d31358e0d567e02179fdd666540e25b042",
+			"size": 80
+		},
+		"img/地图/里奥拉多_地下B1.png": {
+			"sha256": "02b2793be3dc4161694058fa15f864ad62a91588a8dced7248f17aaf15faafd1",
+			"size": 30474
+		},
+		"img/地图/里奥拉多_地下B2.mapmeta.json": {
+			"sha256": "d466774e62b5f09ec56ea44152bbebe0ab6e61e69dd07895a430164d2f163668",
+			"size": 83
+		},
+		"img/地图/里奥拉多_地下B2.png": {
+			"sha256": "3f6874ae9924c7cf08125329b0980e7567aae608db94ffb625d6234af9d473f7",
+			"size": 247649
+		},
+		"img/地图/里奥拉多_战车服务中心1F.mapmeta.json": {
+			"sha256": "dc93637f414105e19be8ba8ce7cc2a803ec42367c54942118a614e68172d18ed",
+			"size": 122
+		},
+		"img/地图/里奥拉多_战车服务中心1F.png": {
+			"sha256": "3b92407b6a4b132f62a2cf7b2dfc0deb2eb7a65aa46f6608965cd1c3d9189a04",
+			"size": 33968
+		},
+		"img/地图/里奥拉多_战车服务中心1F.png.mapmeta.json": {
+			"sha256": "dc93637f414105e19be8ba8ce7cc2a803ec42367c54942118a614e68172d18ed",
+			"size": 122
+		},
+		"img/地图/里奥拉多_战车服务中心2F.mapmeta.json": {
+			"sha256": "31b042b013f1d958d17a5e18e9a4e27d211bcc9de99a2d06d77be1f9e02ed8d6",
+			"size": 120
+		},
+		"img/地图/里奥拉多_战车服务中心2F.png": {
+			"sha256": "1dcb054a18599541fda1765bdc783b7e96b32e1d8e4160a797781bc91fd869d7",
+			"size": 14535
+		},
+		"img/地图/里奥拉多_战车服务中心2F.png.mapmeta.json": {
+			"sha256": "31b042b013f1d958d17a5e18e9a4e27d211bcc9de99a2d06d77be1f9e02ed8d6",
+			"size": 120
+		},
+		"img/地图/里奥拉多_旅店1F.mapmeta.json": {
+			"sha256": "1e4b8cd7d44886fc23da4252e9df6cfbc64c5874ff112a79a80199f580c6cec2",
+			"size": 122
+		},
+		"img/地图/里奥拉多_旅店1F.png": {
+			"sha256": "5c3670e7dd793576416b324751dbbbe24ea38dcbbb424b9aebc9f8c4fdc19b25",
+			"size": 20026
+		},
+		"img/地图/里奥拉多_旅店1F.png.mapmeta.json": {
+			"sha256": "1e4b8cd7d44886fc23da4252e9df6cfbc64c5874ff112a79a80199f580c6cec2",
+			"size": 122
+		},
+		"img/地图/里奥拉多_旅店2F.mapmeta.json": {
+			"sha256": "310b069930032f5fe965a388f36003e47f6fd8708b1f11bf1d271fac37ee2f1d",
+			"size": 122
+		},
+		"img/地图/里奥拉多_旅店2F.png": {
+			"sha256": "047f7827e79007ef94a313817b5602d240f3c7f076ced8c8a702def6243310a7",
+			"size": 16290
+		},
+		"img/地图/里奥拉多_旅店2F.png.mapmeta.json": {
+			"sha256": "310b069930032f5fe965a388f36003e47f6fd8708b1f11bf1d271fac37ee2f1d",
+			"size": 122
+		},
+		"img/地图/里奥拉多_猎人办事处.mapmeta.json": {
+			"sha256": "e0ca0a9d77078a38ba4dcf1e741023f9f460fc6b2b066c5d2ae4c2b9fe755419",
+			"size": 122
+		},
+		"img/地图/里奥拉多_猎人办事处.png": {
+			"sha256": "6b5fad049e066e9b1c2c8380c7ea66862c87338fff370271fb81478f2e8d83f3",
+			"size": 18954
+		},
+		"img/地图/里奥拉多_猎人办事处.png.mapmeta.json": {
+			"sha256": "e0ca0a9d77078a38ba4dcf1e741023f9f460fc6b2b066c5d2ae4c2b9fe755419",
+			"size": 122
+		},
+		"img/地图/里奥拉多_酒吧.mapmeta.json": {
+			"sha256": "fea3b5dfa2685d392e78188428dad9eda913bc45bdf317a9c92c8519a7aba442",
+			"size": 120
+		},
+		"img/地图/里奥拉多_酒吧.png": {
+			"sha256": "730cbfc1e8d3873ca0aff791fd246df0deb325a154f330bc6630115658683e25",
+			"size": 16165
+		},
+		"img/地图/里奥拉多_酒吧.png.mapmeta.json": {
+			"sha256": "fea3b5dfa2685d392e78188428dad9eda913bc45bdf317a9c92c8519a7aba442",
+			"size": 120
 		},
 		"img/地图/阿兰迪斯.mapmeta.json": {
 			"sha256": "32c75d072bd3ee0d1695ad42f17c1f1dba1e8a51080820883f3fd1180bda4d22",
@@ -4322,10 +4726,6 @@
 			"sha256": "88a8fbbd7bf76e829f8a21a879a553e143b7bb61cd7b4e846dd6815f996b20d9",
 			"size": 949
 		},
-		"img/怪物数据/Dr.大王花.png": {
-			"sha256": "83a0a543eaf8f8b6ddb4fa11bc9b509dfe3bd8ba541fd8ae0b058cc8739461a1",
-			"size": 17721
-		},
 		"img/怪物数据/一发屋.png": {
 			"sha256": "f5c94d60bee030e396f528445c1607ecfedf9157845a44586e1117c632aaf0f1",
 			"size": 5417
@@ -4349,10 +4749,6 @@
 		"img/怪物数据/公路枪手.png": {
 			"sha256": "3e3b10a627dd3849ac26fcec18d585345cf5c2582898fabfc6649118d9458c86",
 			"size": 4503
-		},
-		"img/怪物数据/地狱基多拉.png": {
-			"sha256": "9ce8e6c63ab7cb84d6355feb84557784d8ca352a95bb78a4aa18a3dacd8f6063",
-			"size": 6395
 		},
 		"img/怪物数据/夜叉蟹.png": {
 			"sha256": "397d4b155bdc464b1e1ab2cc9a08a18ca83b4e0745933f194359c6e27f7a3666",
@@ -4378,13 +4774,13 @@
 			"sha256": "8a9f1553c8ac846a750d68be34b0f887a6f15e3d0610514888044bb5385cc861",
 			"size": 5607
 		},
+		"img/怪物数据/曼德拉戈拉.png": {
+			"sha256": "f0b9cacdb0763085d8e674f3d42a436f40a3ba0d4672e26ff197d1f4d50f942a",
+			"size": 2653
+		},
 		"img/怪物数据/杀人阿米巴.png": {
 			"sha256": "55173dbdf41dd59bc397296ef96fb2b7c446bcb693a22e7344e1be268c365df3",
 			"size": 3336
-		},
-		"img/怪物数据/杀手洛龙.png": {
-			"sha256": "b238be176cac0fca3fa579d94c16397090a089fd82b51caccc6823f9fb513d95",
-			"size": 7695
 		},
 		"img/怪物数据/毒虫加农炮.png": {
 			"sha256": "4830d1fad8771a4f27da8116795c52d35e92ac91f456d2c4a24f12ad2d015680",
@@ -4430,10 +4826,6 @@
 			"sha256": "643c8d94d716c860eb63fc7b7976759bba5a774a79664ae4df7f66027c90556d",
 			"size": 2164
 		},
-		"img/怪物数据/电磁海月.png": {
-			"sha256": "7288bfbd205163514f6b37d4b2aeb8d374838f3d1137105c38a8fa9200b5a3aa",
-			"size": 6567
-		},
 		"img/怪物数据/监视器.png": {
 			"sha256": "c7774a5618929bc9a219aacc6e7bc91ad5eb218eef0efb7b544d87198afbc837",
 			"size": 1159
@@ -4478,10 +4870,6 @@
 			"sha256": "df76a703539479f1cf71ea12d5fef641eb35f9fc0a8ee2de6a5269f73afb8e88",
 			"size": 19824
 		},
-		"img/怪物数据/超合金战警.png": {
-			"sha256": "b14649bfe8bda4d437fdc42e0e56df0200421445a07a670a5298c4c68a98c7be",
-			"size": 4266
-		},
 		"img/怪物数据/软体加农炮.png": {
 			"sha256": "53b1a585e7819418df7d4f6184e795038c25a815ac43b8275955013b7ab59080",
 			"size": 3241
@@ -4509,6 +4897,14 @@
 		"img/战车/狼车.png": {
 			"sha256": "adbea2b8b0bf183ade3ea3c7dabaa5bc4c63699aa47973b78733de01284e0c9b",
 			"size": 24795
+		},
+		"img/标记配图/临海地铁遗迹推油桶.mp4": {
+			"sha256": "92657ca793bec327a2df7b2b138d52dc69fa16cd5bfca30984bc893b7d67d9c1",
+			"size": 810721
+		},
+		"img/标记配图/北方洞窟B1推油桶.mp4": {
+			"sha256": "047126194c222fd21c508128500c157352e9e19e1d331b4117997a6bfbbdeec7",
+			"size": 2213572
 		},
 		"img/赏金首/Dr.大王花.png": {
 			"sha256": "83a0a543eaf8f8b6ddb4fa11bc9b509dfe3bd8ba541fd8ae0b058cc8739461a1",
