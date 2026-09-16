@@ -1,5 +1,5 @@
 {
-	"version": "2026.09.15_1722",
+	"version": "2026.09.16_1134",
 	"pagesBase": "https://Icegoblins.github.io/Metal-Max-Tools/",
 	"files": {
 		"config.json": {
@@ -11,40 +11,40 @@
 			"size": 367740
 		},
 		"data/人类武器.json": {
-			"sha256": "93ec541c75dc8e36cfca4fae5e3b8f104a2535859466335db69aab2802e7ce78",
-			"size": 4812
+			"sha256": "fa46df5fdb2c809ca3cda1db27f570bd30d9a1a93c4e2feabaf52c1600144991",
+			"size": 5278
 		},
 		"data/人类道具.json": {
-			"sha256": "0593a6edf25f73c5978c6ef17e304ea897ea484a2d847173359e01761d998c00",
-			"size": 8680
+			"sha256": "d1cbc30603a65d3f57930d9e4ad0fdbd45c0af87d9c74c2537c5908c59510988",
+			"size": 13276
 		},
 		"data/人类防具.json": {
 			"sha256": "bb392f0cddfb565f0e73e382e8e9a627a5ed145e99158b19a8f4c88dadbbd454",
 			"size": 17658
 		},
 		"data/冒险指南.json": {
-			"sha256": "cd53f9189e8292ba578b8792ebdb43f9ffff4a6af167c2815f53e30453776827",
-			"size": 3975
+			"sha256": "f983a88e67977209a5a34022f2ebdbcb35b409aebfd112929e189ba071794e6c",
+			"size": 5972
 		},
 		"data/区域遇敌.json": {
 			"sha256": "71633a497417121900529c91caa9fdfe3f97a4b04332ad174ffe9d8fe34f1a5f",
 			"size": 16972
 		},
 		"data/地图.json": {
-			"sha256": "a6612fcacda091ecb64d224ab2fd9f0b1d093b2a819c7d75f44e84ff7ede16e1",
-			"size": 11849
+			"sha256": "8afed2ec48da5ff412a7b54f36882d09088db88a4fa00ecc01537777979530ad",
+			"size": 11691
 		},
 		"data/地图区域.json": {
 			"sha256": "0288e9e61b8ac0697fdcef9e6ce43eba95b8befa82637446f05ae7d22fe73c2a",
 			"size": 17
 		},
 		"data/地图点位.json": {
-			"sha256": "99cbdce724558eed9dc67cf189b55922ecda2bc61084e77b68f528326447d668",
-			"size": 284815
+			"sha256": "50d4c93b8194125c9486b3831f90d987f715691a2fecf66fb9710e5a83cfe248",
+			"size": 315552
 		},
 		"data/怪物数据.json": {
-			"sha256": "522f67c73eef26290e428813d0f1c249e31a697175cf6bda113b42557020a427",
-			"size": 70669
+			"sha256": "fb4327e2381650b9b19751e2538ffb391a7c1e592a3fc7366c90631a54b29b58",
+			"size": 70690
 		},
 		"data/战车.json": {
 			"sha256": "26a157c3e8e54818a72706ceb852f1fbd81db65cf9e7f360ea9a257790532192",
@@ -63,8 +63,8 @@
 			"size": 1779
 		},
 		"data/称号.json": {
-			"sha256": "744a6f7bebf5fb99d3256a4746634f730115d9f6571abca25215609ad9305510",
-			"size": 1096
+			"sha256": "1c82c4f3ba2941582d158501f7bdd1d6d4abfcac3ef44a9ca07f12c7594eb54f",
+			"size": 1538
 		},
 		"data/赏金首.json": {
 			"sha256": "bf495872726ff8e4eab930fa6aea6df502914238f75aee87735f632acdd7b4d0",
@@ -142,25 +142,21 @@
 			"sha256": "89c375a587cc9e116b7d76f1b07244554308c6872c18d2a33446c885ce1e3a0d",
 			"size": 176
 		},
-		"img/冒险指南/01_rabar_pub.png": {
-			"sha256": "7bf1605d2f3e80ed1cee691961a660224f491aeade313a906dd063ef3a4c4d51",
-			"size": 14446
+		"img/冒险指南/寻找巴洛尔.png": {
+			"sha256": "ad73c898392e8273f5f679091aefe46e792d6167fd9130b473d15a772ee8b6de",
+			"size": 2876817
 		},
-		"img/冒险指南/01_riola_village.png": {
-			"sha256": "b386d86705e722064df1d89b872e865edd3b36de1a9d7e253d60cf05c5cd7223",
-			"size": 14990
+		"img/冒险指南/寻找巴洛尔_01.png": {
+			"sha256": "b727f4f18042964b5077da3f003b96721510615df3cd96d305984b205d371637",
+			"size": 435965
 		},
-		"img/冒险指南/03_dixue_chest.png": {
-			"sha256": "65c3d3ffa0141f7dcb458fcab86a09cf92a5f6c2dc3c29e80cf01142c8ead777",
-			"size": 15886
+		"img/冒险指南/泪湖守护人.png": {
+			"sha256": "c2609c38aba763ea5256f68897a5ab904d7ed5dfa0e465111e0a844db1264223",
+			"size": 3002381
 		},
-		"img/冒险指南/03_fengqi_boss.png": {
-			"sha256": "9352a559cbb26672771423efe5ec59e66c9d178e6032fea8788a5f50573349ea",
-			"size": 16169
-		},
-		"img/冒险指南/03_rabar_reward.png": {
-			"sha256": "351d3477097251c8fe43d9a82b71773f419f7d9869aaad79bbb437c8a7c4256c",
-			"size": 15115
+		"img/冒险指南/泪湖守护人_01.png": {
+			"sha256": "aa8bdbae2a701769d7417bdb3faafee6905672644efb710e04c1514fc782136d",
+			"size": 307972
 		},
 		"img/地图/world.mapmeta.json": {
 			"sha256": "44e906c9c0ccac01ca0cd54d4d57208006ba61a4bea91940b8acb906965aa307",
@@ -571,27 +567,15 @@
 			"size": 122
 		},
 		"img/地图/拉巴尔_酒吧.mapmeta.json": {
-			"sha256": "5906a8911bcaa81416ebdc6d897e9d8ec4d9372766ed65452a39cd519838a275",
+			"sha256": "59105d9706985250fc24fe8231b0834a33fd88476f3e6d8d25fbfd2a9085b2ac",
 			"size": 121
 		},
 		"img/地图/拉巴尔_酒吧.png": {
-			"sha256": "8c25f6b5d0acb1e5a0cdb02ae78494cddf444eec4e25dd486dd89af9d02f09d0",
-			"size": 38377
+			"sha256": "735769d57038eae4fa90f4852f6d6186676f9816d01073ca817c2779f7e667cf",
+			"size": 36981
 		},
 		"img/地图/拉巴尔_酒吧.png.mapmeta.json": {
-			"sha256": "5906a8911bcaa81416ebdc6d897e9d8ec4d9372766ed65452a39cd519838a275",
-			"size": 121
-		},
-		"img/地图/拉巴尔_酒馆.mapmeta.json": {
-			"sha256": "e187bebf2acf8dd36f65f3cfbcf81d223b856925ad5acd93f53a5faa9467591a",
-			"size": 121
-		},
-		"img/地图/拉巴尔_酒馆.png": {
-			"sha256": "8c25f6b5d0acb1e5a0cdb02ae78494cddf444eec4e25dd486dd89af9d02f09d0",
-			"size": 38377
-		},
-		"img/地图/拉巴尔_酒馆.png.mapmeta.json": {
-			"sha256": "e187bebf2acf8dd36f65f3cfbcf81d223b856925ad5acd93f53a5faa9467591a",
+			"sha256": "59105d9706985250fc24fe8231b0834a33fd88476f3e6d8d25fbfd2a9085b2ac",
 			"size": 121
 		},
 		"img/地图/拉巴尔_露西耶的家.mapmeta.json": {
@@ -4905,6 +4889,10 @@
 		"img/标记配图/北方洞窟B1推油桶.mp4": {
 			"sha256": "047126194c222fd21c508128500c157352e9e19e1d331b4117997a6bfbbdeec7",
 			"size": 2213572
+		},
+		"img/标记配图/闪光点.gif": {
+			"sha256": "610be84a47cb1ea6a011a9060b3fa61f90143efde0c89fe2c6f51408a2f1bd53",
+			"size": 581
 		},
 		"img/赏金首/Dr.大王花.png": {
 			"sha256": "83a0a543eaf8f8b6ddb4fa11bc9b509dfe3bd8ba541fd8ae0b058cc8739461a1",
