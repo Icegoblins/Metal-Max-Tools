@@ -1,5 +1,5 @@
 {
-	"version": "2026.09.17_1637",
+	"version": "2026.09.22_1717",
 	"pagesBase": "https://Icegoblins.github.io/Metal-Max-Tools/",
 	"files": {
 		"config.json": {
@@ -15,24 +15,24 @@
 			"size": 5278
 		},
 		"data/人类道具.json": {
-			"sha256": "98ebe236edafcb427e0a65f90acfed27a006da4a2fa0ca01fb9b1260b9a1be0e",
-			"size": 14762
+			"sha256": "ff3ee8727e79d0c7aaf5532a110e20a42eb9f62f2fb2615e5cd8121ecd0cea8d",
+			"size": 15988
 		},
 		"data/人类防具.json": {
 			"sha256": "bb392f0cddfb565f0e73e382e8e9a627a5ed145e99158b19a8f4c88dadbbd454",
 			"size": 17658
 		},
 		"data/冒险指南.json": {
-			"sha256": "f983a88e67977209a5a34022f2ebdbcb35b409aebfd112929e189ba071794e6c",
-			"size": 5972
+			"sha256": "95f69cec859f52c5252ebd73dcdf778dcc46198ba01185481c307fe915eb3a28",
+			"size": 6548
 		},
 		"data/区域遇敌.json": {
-			"sha256": "57c317b52893654b3f33d421a92507621aa3786eed1d9b0a2a91d4c9ca555e06",
-			"size": 17411
+			"sha256": "f83033778d8fdca0a8e10f825e9b355b64d86e93d497389b0384f8afa4628c72",
+			"size": 18293
 		},
 		"data/地图.json": {
-			"sha256": "819a943462eb32952fbd527005159503e92ab82b6b9d94ba8b3ead402c253887",
-			"size": 18707
+			"sha256": "271f4672d723b253aecc6e99dd650232920ed0f7b5da6c9430e390476cadf829",
+			"size": 18109
 		},
 		"data/地图区域.json": {
 			"sha256": "0288e9e61b8ac0697fdcef9e6ce43eba95b8befa82637446f05ae7d22fe73c2a",
@@ -43,8 +43,8 @@
 			"size": 367664
 		},
 		"data/怪物数据.json": {
-			"sha256": "ab81d0a10413bb9f4bb0f8e68d81baedd5ced8bd6733bb407ece32040e9df6de",
-			"size": 70911
+			"sha256": "b5358dab6fede7cdb694675e7394c9208dcafd3c90b5f35d65207e62925c0d2f",
+			"size": 71584
 		},
 		"data/战车.json": {
 			"sha256": "26a157c3e8e54818a72706ceb852f1fbd81db65cf9e7f360ea9a257790532192",
@@ -63,8 +63,8 @@
 			"size": 2318
 		},
 		"data/称号.json": {
-			"sha256": "876a050f25b42334734eb79ec6b89ff1f58564d52835735c80ca3520ccbbd9de",
-			"size": 1682
+			"sha256": "c7c59ea0ced015a12c3499453f1948956821243eb2803c2ce15243b23760a2c2",
+			"size": 1980
 		},
 		"data/赏金首.json": {
 			"sha256": "bf495872726ff8e4eab930fa6aea6df502914238f75aee87735f632acdd7b4d0",
@@ -149,6 +149,10 @@
 		"img/冒险指南/寻找巴洛尔_01.png": {
 			"sha256": "b727f4f18042964b5077da3f003b96721510615df3cd96d305984b205d371637",
 			"size": 435965
+		},
+		"img/冒险指南/救救外婆_01.png": {
+			"sha256": "2939de0184b69a63a88ab3bfde80bfd3ba2c62a90e1244da9a18b1ba372261e1",
+			"size": 112800
 		},
 		"img/冒险指南/泪湖守护人.png": {
 			"sha256": "c2609c38aba763ea5256f68897a5ab904d7ed5dfa0e465111e0a844db1264223",
@@ -455,15 +459,15 @@
 			"size": 122
 		},
 		"img/地图/埃塞林_埃塞林大楼B2.mapmeta.json": {
-			"sha256": "b216bf379a82af40fc04f926e91e435ae2254fca27eae6745d830bea68a17f3f",
+			"sha256": "90defc3977b2cef4c2a10a7f66e7237611008843da4dfa9e57114e98f28bfcc0",
 			"size": 122
 		},
 		"img/地图/埃塞林_埃塞林大楼B2.png": {
-			"sha256": "0e85a70d082e6609b49ae0a6b097f25500e71453cd2b26cb0215c113cbeb8a3b",
-			"size": 54290
+			"sha256": "2a8ad6465749bece6d8da401c07326477a542d7e5a1406a2d2eed0f961beb0ae",
+			"size": 54380
 		},
 		"img/地图/埃塞林_埃塞林大楼B2.png.mapmeta.json": {
-			"sha256": "b216bf379a82af40fc04f926e91e435ae2254fca27eae6745d830bea68a17f3f",
+			"sha256": "90defc3977b2cef4c2a10a7f66e7237611008843da4dfa9e57114e98f28bfcc0",
 			"size": 122
 		},
 		"img/地图/埃塞林_战车服务中心.mapmeta.json": {
@@ -976,6 +980,30 @@
 		},
 		"img/地图/海边补给所2F.png.mapmeta.json": {
 			"sha256": "dd4f45a617a4ebafed693d5451e66e6ff82b4e6183d2556cd7b394698c8b6d37",
+			"size": 118
+		},
+		"img/地图/海鸥壁垒.mapmeta.json": {
+			"sha256": "9aece2e11c4dc464d6b72000350be82e0eb76ee6d4a596c5538913e73a82c24b",
+			"size": 118
+		},
+		"img/地图/海鸥壁垒.png": {
+			"sha256": "5e007f584f786f1d0f16b4b78eef528d6ca50f4a820caebf5ba5bb4df34096ff",
+			"size": 172383
+		},
+		"img/地图/海鸥壁垒.png.mapmeta.json": {
+			"sha256": "9aece2e11c4dc464d6b72000350be82e0eb76ee6d4a596c5538913e73a82c24b",
+			"size": 118
+		},
+		"img/地图/海鸥壁垒_上层.mapmeta.json": {
+			"sha256": "64949d0d7aa06b7cc763afcde929d3851122781840ad58d68009a4ac6fd711dc",
+			"size": 118
+		},
+		"img/地图/海鸥壁垒_上层.png": {
+			"sha256": "730044e975ae9308149395fabf7a676e7a1c5ce291c5ce96c0fa097fdd54a9df",
+			"size": 35994
+		},
+		"img/地图/海鸥壁垒_上层.png.mapmeta.json": {
+			"sha256": "64949d0d7aa06b7cc763afcde929d3851122781840ad58d68009a4ac6fd711dc",
 			"size": 118
 		},
 		"img/地图/盘古研究所.mapmeta.json": {
@@ -9318,6 +9346,10 @@
 			"sha256": "f5c94d60bee030e396f528445c1607ecfedf9157845a44586e1117c632aaf0f1",
 			"size": 5417
 		},
+		"img/怪物数据/乌鸦尼科夫.png": {
+			"sha256": "dddb634054a628a261457a5cca1b47396cbbed680c88094a730f99a3c12a28cc",
+			"size": 3791
+		},
 		"img/怪物数据/仿生波奇.png": {
 			"sha256": "157c77266e8dd7893beb27607d011a51043c93082740296f6436d04beccf6f41",
 			"size": 1995
@@ -9331,8 +9363,8 @@
 			"size": 1069
 		},
 		"img/怪物数据/入侵者克星.png": {
-			"sha256": "c1f489b488f7f5a504a88a31e1b1f3ae49eec79919b1d65301c5466abf026744",
-			"size": 1274
+			"sha256": "119b298ae5bafa78306d899b4da0b9fc90e9782c650b547eae77d1ce891099b9",
+			"size": 4991
 		},
 		"img/怪物数据/公路枪手.png": {
 			"sha256": "3e3b10a627dd3849ac26fcec18d585345cf5c2582898fabfc6649118d9458c86",
@@ -9341,6 +9373,10 @@
 		"img/怪物数据/夜叉蟹.png": {
 			"sha256": "397d4b155bdc464b1e1ab2cc9a08a18ca83b4e0745933f194359c6e27f7a3666",
 			"size": 5264
+		},
+		"img/怪物数据/山贼.png": {
+			"sha256": "49ad5466d00f60a8687e37e7c98fbb6827e1b8b607647d8152bbc77dfef4c253",
+			"size": 3414
 		},
 		"img/怪物数据/巡逻蜂.png": {
 			"sha256": "cdcd124100a012d04b6a142c8bfdc95d45b7282424b72f4a8f584dc330515a8a",
@@ -9370,13 +9406,17 @@
 			"sha256": "55173dbdf41dd59bc397296ef96fb2b7c446bcb693a22e7344e1be268c365df3",
 			"size": 3336
 		},
+		"img/怪物数据/步兵僵尸.png": {
+			"sha256": "683201648ea22f8bc739bad48e1a453758608d4c070bb776b02f4674801aaedd",
+			"size": 3188
+		},
 		"img/怪物数据/毒虫加农炮.png": {
 			"sha256": "4830d1fad8771a4f27da8116795c52d35e92ac91f456d2c4a24f12ad2d015680",
 			"size": 4113
 		},
 		"img/怪物数据/毒蛭.png": {
-			"sha256": "27f0c3d5acdaeea30d61c2cbaf540ebdb28d8bbc2920c96e616628af7648d749",
-			"size": 5759
+			"sha256": "08afcfe8316bdb12b022e81c7d7a100953d54f538be0755a8d5ea6dc551e8a5b",
+			"size": 8820
 		},
 		"img/怪物数据/沙地蚁.png": {
 			"sha256": "e8408fd1d6e7bcccb437cfb3eebacf4bb0542578a1b0027e4b5bc8fd7c26eb63",
@@ -9415,8 +9455,8 @@
 			"size": 2164
 		},
 		"img/怪物数据/监视器.png": {
-			"sha256": "c7774a5618929bc9a219aacc6e7bc91ad5eb218eef0efb7b544d87198afbc837",
-			"size": 1159
+			"sha256": "bfd6aa6adf3d76bd23111ca5e0750ec5e4c2d5afedc1750bc7dd5359121d7551",
+			"size": 4394
 		},
 		"img/怪物数据/空油桶.png": {
 			"sha256": "c97e73c3fa588c052c21e7ee7a0f6be736135508c9eb50be02e799b0e702cdee",
@@ -9451,12 +9491,16 @@
 			"size": 5125
 		},
 		"img/怪物数据/蝙蝠系统.png": {
-			"sha256": "f3e3699c4a1bada2278f89865d075ea5a9e8c46aeca02359e017b65f22c7ddba",
-			"size": 1432
+			"sha256": "0dc507d9271e405ece72cfd118bfc51e2b1be0b6b92f5bce697eb9de499f0547",
+			"size": 5681
 		},
 		"img/怪物数据/行商杀手.png": {
 			"sha256": "df76a703539479f1cf71ea12d5fef641eb35f9fc0a8ee2de6a5269f73afb8e88",
 			"size": 19824
+		},
+		"img/怪物数据/超合金克里夫.png": {
+			"sha256": "525eaf2d53a08dcb581a7cb9e6975693dbe909a6c7f12454111561b042e69f80",
+			"size": 22037
 		},
 		"img/怪物数据/软体加农炮.png": {
 			"sha256": "53b1a585e7819418df7d4f6184e795038c25a815ac43b8275955013b7ab59080",
@@ -9479,8 +9523,8 @@
 			"size": 2413
 		},
 		"img/怪物数据/飞行卡介苗.png": {
-			"sha256": "b7249183ecd9378709d3df179d4d9b64b2a41ea8b7dd909c3ced3bde6798a8da",
-			"size": 1529
+			"sha256": "e3dbf74174362f79bd58feb25a948d88aeb7252b62cef77d852b771e8e928d18",
+			"size": 5789
 		},
 		"img/战车/狼车.png": {
 			"sha256": "adbea2b8b0bf183ade3ea3c7dabaa5bc4c63699aa47973b78733de01284e0c9b",
@@ -9518,9 +9562,17 @@
 			"sha256": "9ce8e6c63ab7cb84d6355feb84557784d8ca352a95bb78a4aa18a3dacd8f6063",
 			"size": 6395
 		},
+		"img/赏金首/强力厄普.png": {
+			"sha256": "cef4ca2cb7a35bd9f62adba4af321def96d17c43307476d606cfe8e051b60e08",
+			"size": 3439
+		},
 		"img/赏金首/杀手洛龙.png": {
 			"sha256": "b238be176cac0fca3fa579d94c16397090a089fd82b51caccc6823f9fb513d95",
 			"size": 7695
+		},
+		"img/赏金首/死亡黑桃蝎.png": {
+			"sha256": "1de2a8bc8882e68ce4b8cf1d6c3a3c096306c5c51de5652e1e4460d89ec623c0",
+			"size": 4672
 		},
 		"img/赏金首/电磁海月.png": {
 			"sha256": "7288bfbd205163514f6b37d4b2aeb8d374838f3d1137105c38a8fa9200b5a3aa",
