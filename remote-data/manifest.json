@@ -1,5 +1,5 @@
 {
-	"version": "2026.09.22_1717",
+	"version": "2026.10.17_2349",
 	"pagesBase": "https://Icegoblins.github.io/Metal-Max-Tools/",
 	"files": {
 		"config.json": {
@@ -11,16 +11,16 @@
 			"size": 367740
 		},
 		"data/人类武器.json": {
-			"sha256": "fa46df5fdb2c809ca3cda1db27f570bd30d9a1a93c4e2feabaf52c1600144991",
-			"size": 5278
+			"sha256": "6eef0bcc002a9e6faba19983ab9b24607f6cc19a2934bda8735052f62a38d42f",
+			"size": 6211
 		},
 		"data/人类道具.json": {
-			"sha256": "ff3ee8727e79d0c7aaf5532a110e20a42eb9f62f2fb2615e5cd8121ecd0cea8d",
-			"size": 15988
+			"sha256": "900696cf36cd1b6c35c313203a2454d03ee877f1a3aad197101a244dabd63606",
+			"size": 53188
 		},
 		"data/人类防具.json": {
-			"sha256": "bb392f0cddfb565f0e73e382e8e9a627a5ed145e99158b19a8f4c88dadbbd454",
-			"size": 17658
+			"sha256": "c326918f198e534b6d231c01394a50a06c00ba2c167a1a68bb9a86060a680058",
+			"size": 23380
 		},
 		"data/冒险指南.json": {
 			"sha256": "95f69cec859f52c5252ebd73dcdf778dcc46198ba01185481c307fe915eb3a28",
@@ -43,40 +43,40 @@
 			"size": 367664
 		},
 		"data/怪物数据.json": {
-			"sha256": "b5358dab6fede7cdb694675e7394c9208dcafd3c90b5f35d65207e62925c0d2f",
-			"size": 71584
+			"sha256": "f5a45112740adb24acf0e8d564c2c160b94a5fd3e8175db5fe135c751b3ab2b0",
+			"size": 72996
 		},
 		"data/战车.json": {
 			"sha256": "26a157c3e8e54818a72706ceb852f1fbd81db65cf9e7f360ea9a257790532192",
 			"size": 216
 		},
 		"data/战车装备.json": {
-			"sha256": "22ef13c77fd774847f15da4b822b6fc6867de2cad741a944aed2916f74f363b4",
-			"size": 14270
+			"sha256": "8eb446b378b4431924ed9f39d4ab5ee07ae035fd49396c6d6e06ec112f5ff13a",
+			"size": 14866
 		},
 		"data/战车道具.json": {
-			"sha256": "a23c8e58841f6057f22a67cf2497067701eb424d1d7e8def3e68e353868bd3cd",
-			"size": 2640
+			"sha256": "b7549273dbe4c1ed0df3bae2c6cbe86bbd7ad3782a6f6f2953d733349748922c",
+			"size": 3480
 		},
 		"data/特殊炮弹.json": {
 			"sha256": "68a49deb4a1dc526b7171fbc386d24f547b35af533ffe1b35ea453e13cbe4ab9",
 			"size": 2318
 		},
 		"data/称号.json": {
-			"sha256": "c7c59ea0ced015a12c3499453f1948956821243eb2803c2ce15243b23760a2c2",
-			"size": 1980
+			"sha256": "525e43f081cb5e2d53cef075c6367f280911049937eeb45aca8a83f7e336cc47",
+			"size": 3295
 		},
 		"data/赏金首.json": {
-			"sha256": "bf495872726ff8e4eab930fa6aea6df502914238f75aee87735f632acdd7b4d0",
-			"size": 13739
+			"sha256": "ed12c38f1a83f9612438e229e47a0f5b29883a441db5d08c9b223014523ac437",
+			"size": 13712
 		},
 		"data/链装.json": {
-			"sha256": "72f95eb109c92c9525cd624bc5869c91b1677154b03b6ee26205b6b753c27ff1",
-			"size": 1238991
+			"sha256": "f70f3065a4274316d612b014376195907569d029d418e4b40f5a6dbec80a73c8",
+			"size": 10656326
 		},
 		"data/链装套装.json": {
-			"sha256": "b027d0fec3141cf28e9ff56b8ef05a4f92846766f1796544c25fdae33050d818",
-			"size": 4718
+			"sha256": "13f4be0328ce9f839ff0e5a967c657b295d7b9bc7b33b2d93fef87a7aaea0993",
+			"size": 3103
 		},
 		"data/链装强化.json": {
 			"sha256": "3b75670900ae71f824aafa17111721b1fb4ed526eaece097f43cc8a7417359e7",
