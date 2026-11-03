@@ -1,10 +1,26 @@
 {
-	"version": "2026.10.17_2349",
+	"version": "2026.11.03_2257",
 	"pagesBase": "https://Icegoblins.github.io/Metal-Max-Tools/",
 	"files": {
+		"app.html": {
+			"sha256": "b1d03a0118dfe3e5d6c0195af350037eaee6c80fad3995981a51b3cf3d4904e3",
+			"size": 24889
+		},
 		"config.json": {
 			"sha256": "f136aff88ec655d0ff83978de53ff45fb55914d4936d346e6427dc69d13da168",
 			"size": 199
+		},
+		"index.html": {
+			"sha256": "493c0d057951756ae05163517aa02606e27b9588541a45eeeab4d6f8b3c94e3a",
+			"size": 78942
+		},
+		"map.html": {
+			"sha256": "728f3dfdfea4f81448172fa8eb8afaf7081f06c93ea438fee3a35b04119f09fd",
+			"size": 578513
+		},
+		"style.css": {
+			"sha256": "6274e20326ce0e9356ec4430f9dafd6412d4f90d1436c1289549b89a97105018",
+			"size": 63513
 		},
 		"audio/lens-zoom.wav": {
 			"sha256": "89e1c2b1f374fefbade428561a58606bec55256493ffbf22e4edd6bd8dde791d",
@@ -51,8 +67,8 @@
 			"size": 216
 		},
 		"data/战车装备.json": {
-			"sha256": "8eb446b378b4431924ed9f39d4ab5ee07ae035fd49396c6d6e06ec112f5ff13a",
-			"size": 14866
+			"sha256": "c4498e487934f8b91683ebdf4d5e40460948dacb4d73bb55386e901abbdd9b6b",
+			"size": 25862
 		},
 		"data/战车道具.json": {
 			"sha256": "b7549273dbe4c1ed0df3bae2c6cbe86bbd7ad3782a6f6f2953d733349748922c",
@@ -9581,6 +9597,94 @@
 		"img/赏金首/超合金战警.png": {
 			"sha256": "b14649bfe8bda4d437fdc42e0e56df0200421445a07a670a5298c4c68a98c7be",
 			"size": 4266
+		},
+		"js/app-update.js": {
+			"sha256": "ea42c2e50f15d18f6874ddfdfce50b48b0f916ddb61b54211d01f3b5eadb169f",
+			"size": 8965
+		},
+		"js/data-sync.js": {
+			"sha256": "e3f34814b87b1c54bfe7edc5746b77276d84aabba2b17391761c9997e37f0aad",
+			"size": 8756
+		},
+		"js/desktop-bootstrap.js": {
+			"sha256": "48663c0985460222fc5e06c496cab9220a13051b0f7805b52102b2849857e58c",
+			"size": 4676
+		},
+		"js/desktop-guard.js": {
+			"sha256": "e9b433b0cee3423f130fc0694b7549168f90ec483b6fe234686447eb35e1d256",
+			"size": 321
+		},
+		"js/desktop-titlebar.js": {
+			"sha256": "2eafac55507413ada88457c7c0d5686c4b4de1b676b37011d53a79f3c5e8261b",
+			"size": 3897
+		},
+		"js/item-bridge.js": {
+			"sha256": "34d1d0f136299b0c038d2412097745bd1c2c345e9391c3e93a98bbde2b56b00b",
+			"size": 37849
+		},
+		"js/jukebox-mini.css": {
+			"sha256": "d4487a0876a082c6003d5c1d369172131ff24be053b3353fe573172e80c22bf3",
+			"size": 8466
+		},
+		"js/map-bridge.js": {
+			"sha256": "76f4df67340bcf3c05f4c143de0acb1a1ae6fc5785f36c076aa52c79b0980519",
+			"size": 15325
+		},
+		"js/marker-svg.js": {
+			"sha256": "99b687fa7dcf1a49ced421ced1c3c08807c8816352d9f8777005c5a40a49d4cb",
+			"size": 12949
+		},
+		"js/pages/chenghao.js": {
+			"sha256": "e95bdbd0d1db426a6af4c2cc6c724068cd2b206be5ec01e6c96b193fb5df9383",
+			"size": 3758
+		},
+		"js/pages/dianchangji.js": {
+			"sha256": "df256adde6923e87dbb8b185045d33faaee0a0e5f08fc29c3057e913f86c6ed0",
+			"size": 71064
+		},
+		"js/pages/guaishu.js": {
+			"sha256": "5f2e1b75810ab563032212feaa56bdd52914a2f595394e0b699582e46e38a43e",
+			"size": 6153
+		},
+		"js/pages/lianzhuang.js": {
+			"sha256": "8c059ef9181eb4474c9a80c0351bae3d64e4f69af69bcad4d4280409074c75a8",
+			"size": 21905
+		},
+		"js/pages/maoxianzhinan.js": {
+			"sha256": "fdded9ad61e1c76049b1b3dceaf9b4b9377587c026743ac410b057eadcf3ad69",
+			"size": 18834
+		},
+		"js/pages/renleidaoju.js": {
+			"sha256": "bf9d87cc9675fcac5e0b70a28cdb11649a0c21a220303df067d84139ae752783",
+			"size": 2302
+		},
+		"js/pages/renleifangju.js": {
+			"sha256": "8f622482b89568f3a163f3261a224a1621896fb77a22e6320d97b21020310236",
+			"size": 3575
+		},
+		"js/pages/renleiwuqi.js": {
+			"sha256": "eb9db2bdc455361dfacd8e273a6ef8cccccbc2454a2eb691cb3c99c49f890a0d",
+			"size": 2884
+		},
+		"js/pages/shangjinshou.js": {
+			"sha256": "13b9e5d841cada72cbc4134345ca7cae1aee596ae5cb06cb6e93a2251ef69af7",
+			"size": 6166
+		},
+		"js/pages/teshupaodan.js": {
+			"sha256": "1de2867d1b81f67f07d6bcf2b7e1599997f9629ce4f3bf5494a7e1aaf963c6ee",
+			"size": 2506
+		},
+		"js/pages/utils.js": {
+			"sha256": "bbf20439ae45c673ff09550b4e5aeed0f5a651eca77aa00406a6939f2b87029a",
+			"size": 21066
+		},
+		"js/pages/zhanchedaoju.js": {
+			"sha256": "e045a33c2444ad562b392f4d7c17c61d359ecf67bcde68d59f2605ba8a993cf8",
+			"size": 2317
+		},
+		"js/pages/zhanche_zhuangbei.js": {
+			"sha256": "31d00a4cbde0ae0406559989f36000c9aed29faf51c5b2a2811cc67c07790580",
+			"size": 26887
 		}
 	}
 }

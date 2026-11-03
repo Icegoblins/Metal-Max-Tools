@@ -1,0 +1,359 @@
+/* 跨页面迷你点唱机控制台（index / map 共用） */
+:root {
+    --mm-green: #50ff7d;
+    --mm-green-glow: rgba(80, 255, 125, 0.15);
+    --map-nav-head-height: 28px;
+}
+
+#now-playing-badge {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: rgba(5, 12, 7, 0.92);
+    border: 1px solid var(--mm-green);
+    color: var(--mm-green);
+    font-size: 12px;
+    letter-spacing: 1px;
+    box-shadow: 0 0 12px var(--mm-green-glow);
+    cursor: pointer;
+    max-width: 280px;
+    white-space: nowrap;
+    font-family: "Consolas", "Fixedsys", "Microsoft YaHei", monospace;
+}
+
+#now-playing-badge.expanded {
+    max-width: min(calc(100vw - 36px), 720px);
+}
+
+#now-playing-badge .np-icon {
+    animation: np-blink 1s steps(2) infinite;
+    flex-shrink: 0;
+}
+
+#now-playing-badge .np-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 0;
+    min-width: 48px;
+    max-width: 200px;
+}
+
+#now-playing-badge:hover {
+    background: rgba(8, 20, 11, 0.97);
+}
+
+#now-playing-badge #np-close {
+    flex-shrink: 0;
+    margin-left: 2px;
+    padding: 0 4px;
+    background: transparent;
+    border: none;
+    color: var(--mm-green);
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 1;
+    opacity: 0.55;
+}
+
+#now-playing-badge #np-close:hover {
+    opacity: 1;
+    color: #fff;
+}
+
+#now-playing-peek {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background: rgba(5, 12, 7, 0.92);
+    border: 1px solid var(--mm-green);
+    color: var(--mm-green);
+    font-size: 14px;
+    box-shadow: 0 0 12px var(--mm-green-glow);
+    cursor: pointer;
+    font-family: "Consolas", "Fixedsys", "Microsoft YaHei", monospace;
+}
+
+#now-playing-peek:hover {
+    background: rgba(8, 20, 11, 0.97);
+}
+
+#now-playing-peek .np-icon {
+    animation: np-blink 1s steps(2) infinite;
+}
+
+@keyframes np-blink {
+    50% { opacity: 0.25; }
+}
+
+#np-controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 4px 0;
+    transition: max-width 0.25s ease, opacity 0.2s ease, margin 0.25s ease;
+}
+
+#now-playing-badge.expanded #np-controls {
+    max-width: 480px;
+    opacity: 1;
+    margin-right: 8px;
+    overflow: visible;
+}
+
+#np-controls button {
+    background: #0a140a;
+    border: 1px solid #2a5a35;
+    color: var(--mm-green);
+    cursor: pointer;
+    padding: 3px 8px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+    transition: 0.15s;
+    font-family: inherit;
+}
+
+#np-controls button:hover {
+    border-color: var(--mm-green);
+    background: rgba(80, 255, 125, 0.12);
+}
+
+#np-controls #np-mode {
+    max-width: 72px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#np-controls input[type="range"] {
+    width: 120px;
+    flex-shrink: 0;
+}
+
+#np-controls #np-vol-val {
+    font-size: 11px;
+    color: var(--mm-green);
+    min-width: 34px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+input[type="range"].mm-vol-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    --vol-pct: 100%;
+}
+
+input[type="range"].mm-vol-slider::-webkit-slider-runnable-track {
+    height: 4px;
+    background: linear-gradient(
+        to right,
+        var(--mm-green) 0%,
+        var(--mm-green) var(--vol-pct),
+        #111 var(--vol-pct),
+        #111 100%
+    );
+    border: 1px solid #333;
+    border-radius: 2px;
+}
+
+input[type="range"].mm-vol-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    margin-top: -5px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid var(--mm-green);
+    box-shadow: 0 0 6px var(--mm-green-glow);
+    cursor: pointer;
+}
+
+input[type="range"].mm-vol-slider::-moz-range-track {
+    height: 4px;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 2px;
+}
+
+input[type="range"].mm-vol-slider::-moz-range-progress {
+    height: 4px;
+    background: var(--mm-green);
+    border-radius: 2px;
+}
+
+input[type="range"].mm-vol-slider::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border: 2px solid var(--mm-green);
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 0 6px var(--mm-green-glow);
+    cursor: pointer;
+}
+
+input[type="range"].mm-vol-slider:hover::-webkit-slider-thumb,
+input[type="range"].mm-vol-slider:active::-webkit-slider-thumb {
+    background: var(--mm-green);
+}
+
+input[type="range"].mm-vol-slider:hover::-moz-range-thumb,
+input[type="range"].mm-vol-slider:active::-moz-range-thumb {
+    background: var(--mm-green);
+}
+
+/* 主站 / 地图共用：紧凑条（高 28px，MUS 前缀） */
+#now-playing-badge.mini-bar-compact,
+#map-ui #now-playing-badge.map-layout {
+    padding: 0 8px;
+    gap: 6px;
+    min-height: var(--map-nav-head-height);
+    height: var(--map-nav-head-height);
+    font-size: 11px;
+    letter-spacing: 2px;
+    background: rgba(2, 8, 2, 0.94);
+    box-shadow: 0 0 16px rgba(80, 255, 125, 0.22);
+    border: 1px solid var(--mm-green);
+    max-width: min(168px, 30vw);
+    cursor: default;
+    box-sizing: border-box;
+}
+
+#now-playing-badge.mini-bar-compact::before,
+#map-ui #now-playing-badge.map-layout::before {
+    content: "MUS";
+    flex-shrink: 0;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--mm-green);
+    opacity: 0.92;
+}
+
+#now-playing-badge.mini-bar-compact .np-icon,
+#map-ui #now-playing-badge.map-layout .np-icon {
+    display: none;
+}
+
+#now-playing-badge.mini-bar-compact .np-text,
+#map-ui #now-playing-badge.map-layout .np-text {
+    flex: 1;
+    min-width: 0;
+    max-width: none;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+#now-playing-badge.mini-bar-compact #np-close,
+#map-ui #now-playing-badge.map-layout #np-close {
+    margin-left: auto;
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+#now-playing-peek.mini-bar-compact,
+#map-ui #now-playing-peek.map-layout {
+    width: auto;
+    min-width: 52px;
+    height: var(--map-nav-head-height);
+    padding: 0 10px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    background: rgba(2, 8, 2, 0.94);
+    box-shadow: 0 0 16px rgba(80, 255, 125, 0.22);
+    box-sizing: border-box;
+}
+
+#now-playing-peek.mini-bar-compact::before,
+#map-ui #now-playing-peek.map-layout::before {
+    content: "MUS";
+    margin-right: 4px;
+    letter-spacing: 2px;
+}
+
+#now-playing-peek.mini-bar-compact .np-icon,
+#map-ui #now-playing-peek.map-layout .np-icon {
+    display: none;
+}
+
+#now-playing-badge.mini-bar-compact.expanded,
+#map-ui #now-playing-badge.map-layout.expanded {
+    max-width: min(calc(100vw - 48px), 720px);
+}
+
+#now-playing-badge.mini-bar-compact #np-controls,
+#map-ui #now-playing-badge.map-layout #np-controls {
+    position: static;
+    max-width: 0;
+    margin: 0;
+    padding: 4px 0;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+#now-playing-badge.mini-bar-compact.expanded #np-controls,
+#map-ui #now-playing-badge.map-layout.expanded #np-controls {
+    max-width: min(480px, calc(100vw - 280px));
+    opacity: 1;
+    margin-right: 8px;
+    overflow: visible;
+}
+
+/* 地图页：与 NAV 同层同高，贴在导航窗左侧（仅定位） */
+body.mm-map-page {
+    --map-nav-inset: 14px;
+    --map-nav-width: 180px;
+    --map-nav-gap: 8px;
+    --map-nav-head-height: 28px;
+}
+
+#map-ui #now-playing-badge.map-layout,
+#map-ui #now-playing-peek.map-layout {
+    position: absolute;
+    right: calc(var(--map-nav-inset) + var(--map-nav-width) + var(--map-nav-gap));
+    bottom: var(--map-nav-inset);
+    left: auto;
+    z-index: 405;
+}
+
+/* 主站内嵌 BS控制器面板打开时：徽章左移避开地图 NAV 小地图（NAV: right14 + 宽180 + 间距8），
+   底边与底边、高度与 NAV 折叠头部对齐（实际数值由 index.html 内联写入，这里压内边距防内容溢出） */
+body.bs-pane-open #now-playing-badge {
+    padding: 3px 10px;
+    line-height: 1;
+}
+body.bs-pane-open #now-playing-badge,
+body.bs-pane-open #now-playing-peek {
+    right: calc(14px + 180px + 8px);
+    bottom: 14px;
+}
