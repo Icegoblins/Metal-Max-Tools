@@ -1,0 +1,6 @@
+# 发布仓的文件必须与 manifest.json 记录的 size/sha256 逐字节一致。
+# 客户端从 GitHub Pages 下载的是 git blob 原文；若开启 autocrlf，
+# 工作区 CRLF 提交时被转成 LF，manifest 却按工作区 CRLF 生成，
+# 会导致桌面端 "大小不符" 同步失败。
+# -text：禁止一切换行符/编码转换，工作区字节 == 仓库 blob 字节。
+* -text

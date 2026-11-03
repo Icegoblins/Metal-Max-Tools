@@ -1,5 +1,5 @@
 {
-	"version": "2026.11.03_2257",
+	"version": "2026.11.03_2300",
 	"pagesBase": "https://Icegoblins.github.io/Metal-Max-Tools/",
 	"files": {
 		"app.html": {
@@ -11,12 +11,12 @@
 			"size": 199
 		},
 		"index.html": {
-			"sha256": "493c0d057951756ae05163517aa02606e27b9588541a45eeeab4d6f8b3c94e3a",
-			"size": 78942
+			"sha256": "238a53b8f331ca244387188b313bf33842792148c555504296cecd3195b84e80",
+			"size": 77235
 		},
 		"map.html": {
-			"sha256": "728f3dfdfea4f81448172fa8eb8afaf7081f06c93ea438fee3a35b04119f09fd",
-			"size": 578513
+			"sha256": "b470321cf4a184f9739303b5cc33472799326f48df1e9e2404b27d32cc3f18f0",
+			"size": 565407
 		},
 		"style.css": {
 			"sha256": "6274e20326ce0e9356ec4430f9dafd6412d4f90d1436c1289549b89a97105018",
@@ -9607,20 +9607,20 @@
 			"size": 8756
 		},
 		"js/desktop-bootstrap.js": {
-			"sha256": "48663c0985460222fc5e06c496cab9220a13051b0f7805b52102b2849857e58c",
-			"size": 4676
+			"sha256": "24ae9ccd4d9eb4dbb4c3c916638c393ae861f977d379aff646032df351c2665c",
+			"size": 4563
 		},
 		"js/desktop-guard.js": {
 			"sha256": "e9b433b0cee3423f130fc0694b7549168f90ec483b6fe234686447eb35e1d256",
 			"size": 321
 		},
 		"js/desktop-titlebar.js": {
-			"sha256": "2eafac55507413ada88457c7c0d5686c4b4de1b676b37011d53a79f3c5e8261b",
-			"size": 3897
+			"sha256": "aba6b9945c7916e87603967b8b078fdcf402cfb6766ea10b61a3df8ee4514419",
+			"size": 3791
 		},
 		"js/item-bridge.js": {
-			"sha256": "34d1d0f136299b0c038d2412097745bd1c2c345e9391c3e93a98bbde2b56b00b",
-			"size": 37849
+			"sha256": "599c363ef4e12254ba6102530c878af497421f9f3c8d2f7cffbec59272cb4b69",
+			"size": 36968
 		},
 		"js/jukebox-mini.css": {
 			"sha256": "d4487a0876a082c6003d5c1d369172131ff24be053b3353fe573172e80c22bf3",
@@ -9635,16 +9635,16 @@
 			"size": 12949
 		},
 		"js/pages/chenghao.js": {
-			"sha256": "e95bdbd0d1db426a6af4c2cc6c724068cd2b206be5ec01e6c96b193fb5df9383",
-			"size": 3758
+			"sha256": "d38121f2b4b738299c24e8409b13335d38041794bddd87767ac4f25a24485be0",
+			"size": 3691
 		},
 		"js/pages/dianchangji.js": {
 			"sha256": "df256adde6923e87dbb8b185045d33faaee0a0e5f08fc29c3057e913f86c6ed0",
 			"size": 71064
 		},
 		"js/pages/guaishu.js": {
-			"sha256": "5f2e1b75810ab563032212feaa56bdd52914a2f595394e0b699582e46e38a43e",
-			"size": 6153
+			"sha256": "437f90f3305e3b86a95ffd7d71e40bc734007bc5302db469a206fcfcacf93ba4",
+			"size": 6036
 		},
 		"js/pages/lianzhuang.js": {
 			"sha256": "8c059ef9181eb4474c9a80c0351bae3d64e4f69af69bcad4d4280409074c75a8",
@@ -9655,36 +9655,36 @@
 			"size": 18834
 		},
 		"js/pages/renleidaoju.js": {
-			"sha256": "bf9d87cc9675fcac5e0b70a28cdb11649a0c21a220303df067d84139ae752783",
-			"size": 2302
+			"sha256": "06e5b75ddeffc434f85ec033302f44ca91b9ba716f8a6ac5aa9d63577381a63a",
+			"size": 2249
 		},
 		"js/pages/renleifangju.js": {
-			"sha256": "8f622482b89568f3a163f3261a224a1621896fb77a22e6320d97b21020310236",
-			"size": 3575
+			"sha256": "0364fcc6c5ff9c23ecaffeb72550f48cedf6f7e5918956d1b81690f08bed2d64",
+			"size": 3490
 		},
 		"js/pages/renleiwuqi.js": {
-			"sha256": "eb9db2bdc455361dfacd8e273a6ef8cccccbc2454a2eb691cb3c99c49f890a0d",
-			"size": 2884
+			"sha256": "cdb0a71270c04ef3e5b7a7600661be20d59936b338b797d26241200336068357",
+			"size": 2812
 		},
 		"js/pages/shangjinshou.js": {
 			"sha256": "13b9e5d841cada72cbc4134345ca7cae1aee596ae5cb06cb6e93a2251ef69af7",
 			"size": 6166
 		},
 		"js/pages/teshupaodan.js": {
-			"sha256": "1de2867d1b81f67f07d6bcf2b7e1599997f9629ce4f3bf5494a7e1aaf963c6ee",
-			"size": 2506
+			"sha256": "48360dd9fa75498b7ab8f00cd48fba5dbf65508d89ce95bcd05d54f3c15e8256",
+			"size": 2456
 		},
 		"js/pages/utils.js": {
 			"sha256": "bbf20439ae45c673ff09550b4e5aeed0f5a651eca77aa00406a6939f2b87029a",
 			"size": 21066
 		},
 		"js/pages/zhanchedaoju.js": {
-			"sha256": "e045a33c2444ad562b392f4d7c17c61d359ecf67bcde68d59f2605ba8a993cf8",
-			"size": 2317
+			"sha256": "cad219e21f3f37a43e7b89446c98962a1630f8e4951f084c83793755d6e017ee",
+			"size": 2268
 		},
 		"js/pages/zhanche_zhuangbei.js": {
-			"sha256": "31d00a4cbde0ae0406559989f36000c9aed29faf51c5b2a2811cc67c07790580",
-			"size": 26887
+			"sha256": "da31045e5abf2e21b1106cc562958fa71d6dcead9b99094ecc52ba438abba857",
+			"size": 26387
 		}
 	}
 }
