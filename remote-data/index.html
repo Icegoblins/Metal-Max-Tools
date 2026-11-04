@@ -78,6 +78,17 @@
                                 <span class="sts-label" id="shiny-toggle-label">普通</span>
                             </span>
                         </button>
+                        <button type="button" id="teji-toggle" class="shiny-terminal-switch"
+                                style="display:none" onclick="window.toggleTejiAdvance()"
+                                title="切换普通/进阶技能" aria-label="切换普通/进阶技能">
+                            <span class="sts-track">
+                                <span class="sts-slide" aria-hidden="true">
+                                    <span class="sts-knob"></span>
+                                    <span class="sts-vdiv"></span>
+                                </span>
+                                <span class="sts-label" id="teji-toggle-label">普通</span>
+                            </span>
+                        </button>
                     </div>
                     <div class="system-status">DECODING: ACTIVE<br>SIGNAL: STRONG [||||||  ]<br>REF: METAL MAX-DB-V2.2</div>
                 </div>
@@ -173,6 +184,7 @@
 <script src="js/pages/teshupaodan.js"></script>
 <script src="js/pages/zhanchedaoju.js"></script>
 <script src="js/pages/chenghao.js"></script>
+<script src="js/pages/teji.js"></script>
 <script src="js/pages/dianchangji.js"></script>
 
 <script>
@@ -601,6 +613,10 @@ function renderDefaultUI(container, val) {
 
         // 2. 多维度模糊匹配逻辑
         const filtered = currentRawData.filter(it => {
+            if (activeTab === "特技") {
+                return [it.名称, it.族, it.效果, it.类型, it.使用次数]
+                    .some(v => String(v ?? "").toLowerCase().includes(query));
+            }
             return (it.名称 && it.名称.toLowerCase().includes(query)) ||
                    (it.部位 && it.部位.toLowerCase().includes(query)) ||
                    (it.改造支系 && it.改造支系.toLowerCase().includes(query)) ||
@@ -653,6 +669,11 @@ function renderDefaultUI(container, val) {
             const listData = typeof filterNormalRows === "function" ? filterNormalRows(data) : data;
             const groupKeyMap = { "赏金首": "级别" };
             renderList(listData, false, groupKeyMap[activeTab] || "类型");
+        } else if (activeTab === "特技") {
+            // 列表只显示「普通 + Lv.1」的基础技能；进阶与高等级在详情页用开关/等级按钮切换
+            const isBasic = it => !String(it.名称 || "").startsWith("真") && Number(it.等级) === 1;
+            const basic = (data || []).filter(isBasic);
+            renderList(basic.length ? basic : (data || []), false, "类型");
         } else {
             const groupKeyMap = { "人类防具": "部位", "人类道具": "类型", "人类武器": "类型", "赏金首": "级别" };
             renderList(data, false, groupKeyMap[activeTab] || "类型");
@@ -899,6 +920,8 @@ function renderGroupedList(data, activeTab) {
     picArea.className = 'visual-box'; // 移除旧的皮肤类（如 skin-jukebox）
     if (moneyTag) moneyTag.style.display = 'block'; // 强制恢复价格显示
     syncShinyUi(item, activeTab, picArea);
+    // 特技页：名称旁的「普通 / 进阶」开关（与闪光开关互斥，由各自分类控制显隐）
+    if (window.syncTejiUi) window.syncTejiUi(item, activeTab);
 
     // 3. 基础信息渲染
     const starStr = (item.星级 && item.星级 > 0) ? " " + "★".repeat(item.星级) : "";
@@ -914,7 +937,7 @@ function renderGroupedList(data, activeTab) {
             moneyTag.innerText = formatPrice(getItemPrice(item));
         }
         // 称号/冒险指南没有价格概念，隐藏海报金额位
-        if ((activeTab === "称号" || activeTab === "冒险指南") && moneyTag) moneyTag.style.display = 'none';
+        if ((activeTab === "称号" || activeTab === "冒险指南" || activeTab === "特技") && moneyTag) moneyTag.style.display = 'none';
     }
 
     // 4. 执行渲染器插件

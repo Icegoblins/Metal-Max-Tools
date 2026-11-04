@@ -1,5 +1,5 @@
 {
-	"version": "2026.11.03_2300",
+	"version": "2026.11.05_0329",
 	"pagesBase": "https://Icegoblins.github.io/Metal-Max-Tools/",
 	"files": {
 		"app.html": {
@@ -7,12 +7,12 @@
 			"size": 24889
 		},
 		"config.json": {
-			"sha256": "f136aff88ec655d0ff83978de53ff45fb55914d4936d346e6427dc69d13da168",
-			"size": 199
+			"sha256": "192ad18237bd871d73680022b9dd8a82e64048182ca2c61e5d920eb6c387e834",
+			"size": 210
 		},
 		"index.html": {
-			"sha256": "238a53b8f331ca244387188b313bf33842792148c555504296cecd3195b84e80",
-			"size": 77235
+			"sha256": "71f8b8ea62c1161960cdf8caf53c2b4cce603b56bd0a90361cde1134e85b4b93",
+			"size": 78863
 		},
 		"map.html": {
 			"sha256": "b470321cf4a184f9739303b5cc33472799326f48df1e9e2404b27d32cc3f18f0",
@@ -73,6 +73,10 @@
 		"data/战车道具.json": {
 			"sha256": "b7549273dbe4c1ed0df3bae2c6cbe86bbd7ad3782a6f6f2953d733349748922c",
 			"size": 3480
+		},
+		"data/特技.json": {
+			"sha256": "568878f5a303f442cab54ab0c015d969e5ec74f333e36a42038c1bf52c2e3a92",
+			"size": 143300
 		},
 		"data/特殊炮弹.json": {
 			"sha256": "68a49deb4a1dc526b7171fbc386d24f547b35af533ffe1b35ea453e13cbe4ab9",
@@ -9669,6 +9673,10 @@
 		"js/pages/shangjinshou.js": {
 			"sha256": "13b9e5d841cada72cbc4134345ca7cae1aee596ae5cb06cb6e93a2251ef69af7",
 			"size": 6166
+		},
+		"js/pages/teji.js": {
+			"sha256": "67b65af5028025c8d3ce3afef1147172e325d851973ca780b381a832ec3bd094",
+			"size": 8060
 		},
 		"js/pages/teshupaodan.js": {
 			"sha256": "48360dd9fa75498b7ab8f00cd48fba5dbf65508d89ce95bcd05d54f3c15e8256",
