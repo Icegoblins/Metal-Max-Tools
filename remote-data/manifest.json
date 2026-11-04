@@ -1,5 +1,5 @@
 {
-	"version": "2026.11.05_0329",
+	"version": "2026.11.05_0500",
 	"pagesBase": "https://Icegoblins.github.io/Metal-Max-Tools/",
 	"files": {
 		"app.html": {
@@ -59,12 +59,12 @@
 			"size": 367664
 		},
 		"data/怪物数据.json": {
-			"sha256": "f5a45112740adb24acf0e8d564c2c160b94a5fd3e8175db5fe135c751b3ab2b0",
-			"size": 72996
+			"sha256": "ccdc22d0a427545b079fb5f1e9c86fd314f4eb32903a600bfd60d8fb3a94c1d7",
+			"size": 72964
 		},
 		"data/战车.json": {
-			"sha256": "26a157c3e8e54818a72706ceb852f1fbd81db65cf9e7f360ea9a257790532192",
-			"size": 216
+			"sha256": "6fa343c6df368eb8b1a3cd50abd161c0e1a1567dab0f2fc16f3e753f5d87c5ed",
+			"size": 270
 		},
 		"data/战车装备.json": {
 			"sha256": "c4498e487934f8b91683ebdf4d5e40460948dacb4d73bb55386e901abbdd9b6b",
@@ -83,12 +83,12 @@
 			"size": 2318
 		},
 		"data/称号.json": {
-			"sha256": "525e43f081cb5e2d53cef075c6367f280911049937eeb45aca8a83f7e336cc47",
-			"size": 3295
+			"sha256": "f2c737f23849da2a67a337f2fe9f9660ed76bd5caad268e87a19f77be7f76920",
+			"size": 6212
 		},
 		"data/赏金首.json": {
-			"sha256": "ed12c38f1a83f9612438e229e47a0f5b29883a441db5d08c9b223014523ac437",
-			"size": 13712
+			"sha256": "b7b59b579b57848aa1c0844b89ce0ef44adc686920deb690b543e19132a0c43a",
+			"size": 15444
 		},
 		"data/链装.json": {
 			"sha256": "f70f3065a4274316d612b014376195907569d029d418e4b40f5a6dbec80a73c8",
